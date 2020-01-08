@@ -9,7 +9,7 @@ public class DeleteNodeAtAllOccurences {
 		
 		while(ptr != null){
 			
-			if(ptr.data == key){
+			if(ptr.val == key){
 				prev.next = ptr.next;
 			}
 			else{

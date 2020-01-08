@@ -2,26 +2,27 @@ package tree;
 
 public class PrintNonSiblingNodes {
 
-	private void printNonSiblingNodes(TreeNode node){
+	private TreeNode printNonSiblingNodes(TreeNode node){
 		
 		if(node == null)
-			return;
+			return null;
+		
+		TreeNode left = printNonSiblingNodes(node.left);
+		TreeNode right = printNonSiblingNodes(node.right);
 		
 		if(node.left == null && node.right == null){
-			return;
+			return node;
 		}
 		
 		if(node.left==null){
-			System.out.println(node.right.data);
+			System.out.println(node.right.val);
 		}
 		
 		if(node.right==null){
-			System.out.println(node.left.data);
+			System.out.println(node.left.val);
 		}
 		
-		printNonSiblingNodes(node.left);
-		printNonSiblingNodes(node.right);
-		
+		return node;
 	}
 	
 	public static void main(String[] args) {

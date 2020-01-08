@@ -24,11 +24,11 @@ public class Eventual_Safe_States {
 	    }
 	 //color0 = white, color2 = grey, color1 = black.
 	    public boolean dfs(int[][] graph, int start, int[] color){
-	        if(color[start] != 0)   return color[start] == 1;
+	        if(color[start] != 0)   return color[start] == 2;
 	        
 	        color[start] = 2;
 	        for(int newNode : graph[start]){
-	            if(!dfs(graph, newNode, color))    return false;
+	            if(dfs(graph, newNode, color))    return false;
 	        }
 	        color[start] = 1;
 	        

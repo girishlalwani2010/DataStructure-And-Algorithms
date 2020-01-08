@@ -44,7 +44,7 @@ public class MedianOfTwoSortedArrayInLogMPlusN {
 	public static double findMedianSortedArrays(int nums1[], int nums2[]) {
 
 		// if input1 length is greater than switch them so that input1 is smaller than
-		// input2.
+		// input2. to solve it in log(min(m,n))
 		if (nums1.length > nums2.length) {
 			return findMedianSortedArrays(nums2, nums1);
 		}

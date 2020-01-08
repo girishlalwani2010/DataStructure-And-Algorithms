@@ -9,7 +9,7 @@ public class LongestConsecutiveSequence {
 		if(root == null)
 			return;
 		
-		if(root.data == expected)
+		if(root.val == expected)
 			curLength++;
 		else
 			curLength=1;
@@ -17,8 +17,8 @@ public class LongestConsecutiveSequence {
 		
 		result = Math.max(result, curLength);
 		
-		getLongestConsecutiveSequenceLength(root.left, curLength ,root.data+1);
-		getLongestConsecutiveSequenceLength(root.right, curLength ,root.data+1);
+		getLongestConsecutiveSequenceLength(root.left, curLength ,root.val+1);
+		getLongestConsecutiveSequenceLength(root.right, curLength ,root.val+1);
 		
 	}
 
@@ -32,7 +32,7 @@ public class LongestConsecutiveSequence {
 			root.right.left = new TreeNode(5);
 			root.right.right = new TreeNode(6);
 			root.right.right.left = new TreeNode(7);
-		longestConsecutiveSequence.getLongestConsecutiveSequenceLength(root, 1, root.data);
+		longestConsecutiveSequence.getLongestConsecutiveSequenceLength(root, 1, root.val);
 		System.out.println("Length of Longest Consecutive Suqsequence is "+result);
 	}
 	

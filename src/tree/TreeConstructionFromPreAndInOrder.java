@@ -29,7 +29,11 @@ public class TreeConstructionFromPreAndInOrder {
 		
 		TreeNode tNode = new TreeNode(pre[preIndex++]);
 		
-		int inIndex = search(in, inStrt, inEnd, tNode.data);
+		if(inStrt == inEnd) {
+			return tNode;
+		}
+		
+		int inIndex = search(in, inStrt, inEnd, tNode.val);
 		
 		tNode.left = buildTree(in, pre, inStrt, inIndex);
 		tNode.right = buildTree(in, pre, inIndex+1, inEnd);

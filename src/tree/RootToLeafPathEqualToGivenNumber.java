@@ -7,7 +7,7 @@ public class RootToLeafPathEqualToGivenNumber {
 		if(node==null)
 			return false;
 		
-		givenNumber = givenNumber - node.data;
+		givenNumber = givenNumber - node.val;
 		
 		if(node.left == null && node.right==null){
 			return (givenNumber == 0);

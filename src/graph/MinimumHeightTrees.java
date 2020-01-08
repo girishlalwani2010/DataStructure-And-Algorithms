@@ -63,11 +63,11 @@ public class MinimumHeightTrees {
 		return mHTRoots;
 	}
 
-	public void bfs(int source, List<List<Integer>> adj, int[] dist, boolean[] visited, int[] maxDist) {
+	public void bfs(int source, List<List<Integer>> adj, int[] dist, boolean[] visited, int[] maxDistFromSource) {
 		Queue<Integer> queue = new LinkedList<Integer>();
 		queue.add(source);
 		visited[source] = true;
-		while (!queue.isEmpty()) {
+		while (!queue.isEmpty()) {	
 			int node = queue.poll();
 			for (int i : adj.get(node)) {
 				if (!visited[i]) {
@@ -84,7 +84,7 @@ public class MinimumHeightTrees {
 				max = dist[i];
 			}
 		}
-		maxDist[source] = max;
+		maxDistFromSource[source] = max;
 	}
 	
 	
@@ -104,8 +104,8 @@ public class MinimumHeightTrees {
 	        if (adj.get(i).size() == 1) leaves.add(i);
 
 	    while (n > 2) {
-	    	 n = n-leaves.size();
-	    	 List<Integer> newLeaves = new ArrayList<>();
+	    	n = n-leaves.size();
+	    	List<Integer> newLeaves = new ArrayList<>();
 	    	for(int i : leaves) {
 	    		int j = adj.get(i).iterator().next();
 	    		adj.get(j).remove(i);

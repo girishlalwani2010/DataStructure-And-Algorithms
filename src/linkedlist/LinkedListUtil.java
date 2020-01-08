@@ -5,7 +5,7 @@ public class LinkedListUtil {
 	private static void printList(ListNode head) {
 		
 		while(head != null){
-			System.out.print(head.data+"-->");
+			System.out.print(head.val+"-->");
 			head = head.next;
 		}
 		
@@ -18,7 +18,7 @@ public class LinkedListUtil {
 		boolean deleteFromBegin = false;
 		
 		while(ptr!=null){
-			if( ptr.data == x){
+			if( ptr.val == x){
 					prev.next = ptr.next;
 					//ptr = prev;
 			}
@@ -41,7 +41,7 @@ private static ListNode deleteNode2(ListNode head, int x){
 		ListNode ptr = head;
 		
 		while(ptr.next!=null){
-			if( ptr.next.data == x){
+			if( ptr.next.val == x){
 					ptr.next = ptr.next.next;
 			}
 			else{
@@ -60,7 +60,7 @@ private static ListNode deleteNode2(ListNode head, int x){
 	    ListNode p = helper;
 	 
 	    while(p.next != null){
-	        if(p.next.data == val){
+	        if(p.next.val == val){
 	            p.next = p.next.next;
 	        }else{
 	            p = p.next;
@@ -77,7 +77,7 @@ private static ListNode deleteNode2(ListNode head, int x){
 	 
 	    while(p.next.next != null){
 	    	
-	        if(p.next.data == p.next.next.data){
+	        if(p.next.val == p.next.next.val){
 	            p.next = p.next.next.next;
 	        }else{
 	            p = p.next;

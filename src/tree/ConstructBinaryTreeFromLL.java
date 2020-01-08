@@ -9,18 +9,18 @@ public class ConstructBinaryTreeFromLL {
 
 	private TreeNode makeBinaryTree(TreeNode tRoot, ListNode lRoot){
 		
-		tRoot = new TreeNode(lRoot.data);
+		tRoot = new TreeNode(lRoot.val);
 		Queue<TreeNode> queue = new LinkedList<TreeNode>();
 		queue.add(tRoot);
 		while(lRoot.next!=null){
 			TreeNode node = queue.poll();
 			if(lRoot.next!=null){
-				node.left = new TreeNode(lRoot.next.data);
+				node.left = new TreeNode(lRoot.next.val);
 				queue.add(node.left);
 				lRoot = lRoot.next;
 			}
 			if(lRoot.next!=null){
-				node.right = new TreeNode(lRoot.next.data);
+				node.right = new TreeNode(lRoot.next.val);
 				queue.add(node.right);
 				lRoot = lRoot.next;
 			}

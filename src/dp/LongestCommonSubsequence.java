@@ -4,38 +4,37 @@ import java.util.Arrays;
 
 public class LongestCommonSubsequence {
 	
-	public static int LCSLengthWithRecursion(String s1, String s2, int m, int n) {
-		if(m==0 || n==0) {
-			if(s1.indexOf(s2.charAt(n))>=0 || s2.indexOf(s1.charAt(m))>=0)
-				return 1;
-			return 0;
-		}
-//		if(m<0 || n<0) {
-//			return 0;
-//		}
-		else {
-			if(s1.charAt(m-1) == s2.charAt(n-1)) {
-				return LCSLengthWithRecursion(s1, s2, m-2, n-2) + 1;
-			}else {
-				return Math.max(LCSLengthWithRecursion(s1, s2, m-2, n-1), LCSLengthWithRecursion(s1, s2, m-1, n-2));
-			}
-			
-		}
-	}
-	
-	public static int LCSLengthWithRecursionAndMemoization(String s1, String s2, int m, int n, int[][] memoForRecursion) {
-		if(m<0 || n<0) {
-			return 0;
-		}
-		if(memoForRecursion[m][n] == 0) {
-			if(s1.charAt(m) == s2.charAt(n)) {
-				memoForRecursion[m][n] = LCSLengthWithRecursionAndMemoization(s1, s2, m-1, n-1,memoForRecursion) + 1;
-			}else {
-				memoForRecursion[m][n] = Math.max(LCSLengthWithRecursionAndMemoization(s1, s2, m-1, n,memoForRecursion), LCSLengthWithRecursionAndMemoization(s1, s2, m, n-1,memoForRecursion));
-			}
-		}
-		return memoForRecursion[m][n];
-	}
+	 /**
+	 * @param text1
+	 * @param text2
+	 * @return
+	 * 
+	 * 26 ms Runtime on Leetcode.
+	 */
+	public int longestCommonSubsequence(String text1, String text2) {
+	        int m = text1.length();
+	        int n = text2.length();
+	        return longestCommonSubsequenceUsingTopDownMemoization(text1, text2, m-1, n-1, new Integer[m][n]);
+	    }
+	    
+	    public int longestCommonSubsequenceUsingTopDownMemoization(String text1, String text2, int m, int n,Integer dp[][]){
+	        if(m<0 || n<0){
+	            return 0;
+	        }
+	        
+	        if(dp[m][n]!=null){
+	            return dp[m][n]; // or map.get(i+"|"+j);
+	        }
+	        
+	        if(text1.charAt(m) == text2.charAt(n)){
+	            // or map.put(i+"|"+j, 1+longestCommonSubsequence(text1, text2, i-1, j-1));
+	            dp[m][n] = 1+longestCommonSubsequenceUsingTopDownMemoization(text1, text2, m-1, n-1, dp);
+	        }else{
+	            dp[m][n] = Math.max(longestCommonSubsequenceUsingTopDownMemoization(text1, text2, m-1, n, dp),                                                longestCommonSubsequenceUsingTopDownMemoization(text1, text2, m, n-1, dp));
+	        }
+	        
+	        return dp[m][n];
+	    }
 	
 	
 	public static int LCSLengthWithDPNaive(String s1, String s2, int m, int n) {
@@ -71,6 +70,14 @@ public class LongestCommonSubsequence {
 	}
 	
 	
+	/**
+	 * @param s1
+	 * @param s2
+	 * @param m
+	 * @param n
+	 * @return
+	 * 6ms Runtime on Leetcode.
+	 */
 	public static int LCSLengthWithDP(String s1, String s2, int m, int n) {
 		int dp[][] = new int[m+1][n+1];
 		char[] cs1 = s1.toCharArray();

@@ -52,7 +52,7 @@ public class DetectAndRemoveLoop {
     // Function to print the linked list
     void printList(ListNode node) {
         while (node != null) {
-            System.out.print(node.data + " ");
+            System.out.print(node.val + " ");
             node = node.next;
         }
 

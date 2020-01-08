@@ -9,19 +9,19 @@ import java.util.Stack;
 
 public class DFS {
 	
-	private static void recursiveDFS(Node node, Set<Integer> visited) {
-		System.out.println(node.val);
+	public static void recursiveDFS(Node node, Set<Integer> visited) {
+		System.out.println("Val:["+node.val+"] "+"HashCode:["+node.hashCode()+"]");
+		visited.add(node.val);
 		for(Node neighbour : node.neighbors) {
-			if(!visited.contains(neighbour.val)) {
-				visited.add(neighbour.val);
+			if(!visited.contains(neighbour.val)){
 				recursiveDFS(neighbour, visited);
 			}
 		}
 	}
 	
-	private static void recursiveDFS(Node node) {
+	public static void recursiveDFS(Node node) {
 		Set<Integer> visited = new HashSet<Integer>();
-		visited.add(node.val);
+		System.out.println("Recursive DFS:");
 		recursiveDFS(node,visited);
 	}
 	
@@ -33,14 +33,15 @@ public class DFS {
 		Set<Integer> visited = new HashSet<Integer>();
 		visited.add(node.val);
 		while(!stack.isEmpty()) {
-			Node currentNode = stack.peek();
+			Node currentNode = stack.pop();
+			System.out.println(currentNode.val);
 			for(Node neighbour : currentNode.neighbors){
 				if(!visited.contains(neighbour.val)) {
 					stack.push(neighbour);
 					visited.add(neighbour.val);
 				}
 			}
-			System.out.println(stack.pop().val);
+			
 		}
 	}
 	
@@ -107,9 +108,9 @@ public class DFS {
 //		1--2
 //		|  |
 //		4--3 
-//		
-		//recursiveDFS(node1);
-		System.out.println("DFS : ");
+		System.out.println("Recursive DFS : ");
+		recursiveDFS(node1);
+		System.out.println("ReverseOrderDFS : ");
 		reverseOrderDFS(node1);
 		System.out.println("BFS : ");
 		bfs(node1);

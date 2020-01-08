@@ -37,8 +37,31 @@ public class MinimumFromRotatedSortedArrayWithDuplicates {
         return nums[left];
     }
 	
+	
+	public int findMinSameAsMinimumFromSortedRotatedArrays(int[] nums) {
+	    int low = 0, high = nums.length - 1;
+
+	    while (low <= high) {
+	      int pivot = low + (high - low) / 2;
+	      if(pivot-1>=0 && nums[pivot]<nums[pivot-1]){
+	                return nums[pivot];
+	            } 
+	      if (nums[pivot] < nums[high])
+	        high = pivot-1;
+	      else if (nums[pivot] > nums[high])
+	        low = pivot + 1;
+	      //changed from without duplicates.
+	      else
+	        high -= 1;
+	    }
+	    //just a change need to return nums[low];
+	    // see visualization in leetcode solution.
+	    return nums[low];
+	  }
+	
 	public static void main(String[] args) {
 		int nums[] = {10,0,10,10,10,10};
+		int nums1[] = new int[] {1,1};
 		System.out.println(findMin(nums));
 	}
 

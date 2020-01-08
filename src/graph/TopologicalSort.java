@@ -34,8 +34,7 @@ class TopologicalSort
         // Recur for all the vertices adjacent to this 
         // vertex 
         Iterator<Integer> it = adj[v].iterator(); 
-        while (it.hasNext()) 
-        { 
+        while (it.hasNext()) { 
             i = it.next(); 
             if (!visited[i]) 
                 topologicalSortUtil(i, visited, stack); 

@@ -23,6 +23,8 @@ Explanation: Buy on day 2 (price = 2) and sell on day 3 (price = 6), profit = 6-
              Then buy on day 5 (price = 0) and sell on day 6 (price = 3), profit = 3-0 = 3.
  *  
  * 
+ * 
+ * Why DP ,as in the recursion you have to calculate subproblems again and again and it has optimal property i.e. we have to calculate max profit
  */
 public class BuyAndSellStockWithAtMostKTransactions {
 	

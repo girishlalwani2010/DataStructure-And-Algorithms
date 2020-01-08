@@ -18,7 +18,7 @@ public class MirrorOfBinaryTree {
 	private static void printBinaryTree(TreeNode root){
 		
 		if(root!=null){
-			System.out.print(root.data+" ");
+			System.out.print(root.val+" ");
 			printBinaryTree(root.left);
 			printBinaryTree(root.right);
 		}

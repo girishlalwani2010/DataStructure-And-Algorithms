@@ -49,7 +49,7 @@ public class InorderLevelOrderToTree {
 	public void printINORDER(TreeNode root) {
 		if (root != null) {
 			printINORDER(root.left);
-			System.out.print("  " + root.data);
+			System.out.print("  " + root.val);
 			printINORDER(root.right);
 		}
 	}

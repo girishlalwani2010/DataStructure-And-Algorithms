@@ -20,7 +20,7 @@ public class IntersectionOfTwoSortedList {
 	private void printList(ListNode head) {
 		
 		while(head != null){
-			System.out.print(head.data+"-->");
+			System.out.print(head.val+"-->");
 			head = head.next;
 		}
 		
@@ -29,14 +29,14 @@ public class IntersectionOfTwoSortedList {
 	private ListNode intersection(ListNode L1, ListNode L2){
 		
 		while(L1 != null && L2 != null){
-			if(L1.data<L2.data){
+			if(L1.val<L2.val){
 				L1 = L1.next;
 			}
-			else if(L2.data<L1.data){
+			else if(L2.val<L1.val){
 				L2 = L2.next;
 			}
 			else{
-				pushDataToList(L1.data);
+				pushDataToList(L1.val);
 				L1 = L1.next;
 				L2 = L2.next;
 			}

@@ -54,6 +54,5 @@ class MaxOfAllSubArrayOfSizeKUsingStack
         int n = a.length; 
         int k = 3; 
         print_max(a, n, k); 
-  
     } 
 } 

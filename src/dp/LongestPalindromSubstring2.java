@@ -1,5 +1,10 @@
 package dp;
 
+/**
+ * @author girish_lalwani
+ *
+ *
+ */
 public class LongestPalindromSubstring2 {
 	
 	public static String longestPalindtomSubstringLength(String s) {

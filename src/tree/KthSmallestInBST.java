@@ -19,7 +19,7 @@ public class KthSmallestInBST {
 				TreeNode t = stack.pop();
 				k--;
 				if(k==0){
-					kthSmallest = t.data;
+					kthSmallest = t.val;
 					break;
 				}
 				p = t.right;

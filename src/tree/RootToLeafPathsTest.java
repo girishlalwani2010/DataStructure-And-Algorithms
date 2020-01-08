@@ -33,7 +33,7 @@ import java.util.ArrayList;
 	    	 if(root == null) {
 		            return;
 		        }
-	        path.add(root.data);
+	        path.add(root.val);
 	        
 	        if(root.left == null && root.right == null) {
 	            printList(path);

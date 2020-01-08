@@ -1,3 +1,6 @@
+Need to give moock Interviews must for to be in confidence
+http://www.ardendertat.com/2012/01/09/programming-interview-questions/ - 21 interview Questions very imp.
+
 https://leetcode.com/problems/minimum-domino-rotations-for-equal-row/
 https://leetcode.com/problems/split-array-largest-sum/
 https://leetcode.com/problems/two-sum/
@@ -31,6 +34,10 @@ https://leetcode.com/problems/delete-nodes-and-return-forest/
 https://leetcode.com/problems/network-delay-time/
 https://leetcode.com/problems/24-game/
 
+General- Approach to Backtracking
+https://leetcode.com/problems/permutations/discuss/18239/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partioning)
+
+
 https://leetcode.com/problems/permutations-ii/
 https://leetcode.com/problems/permutation-sequence/
 https://leetcode.com/problems/next-permutation/
@@ -46,6 +53,7 @@ https://leetcode.com/problems/number-of-islands/
 https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/
 https://leetcode.com/problems/binary-tree-coloring-game/
 https://leetcode.com/problems/find-eventual-safe-states/
+Longest path in a matrix.
 
 https://leetcode.com/problems/redundant-connection-ii/
 https://leetcode.com/problems/longest-increasing-path-in-a-matrix/
@@ -58,7 +66,7 @@ https://leetcode.com/problems/recover-binary-search-tree/
 https://leetcode.com/problems/binary-tree-maximum-path-sum/
 https://leetcode.com/problems/reconstruct-itinerary/
 https://leetcode.com/problems/minesweeper/
-https://leetcode.com/problems/the-maze/
+https://leetcode.com/problems/the-maze/  -- very good
 https://leetcode.com/problems/pacific-atlantic-water-flow/
 
 
@@ -72,14 +80,19 @@ https://leetcode.com/problems/letter-combinations-of-a-phone-number/
 https://leetcode.com/problems/path-with-maximum-gold/
 https://leetcode.com/problems/word-break-ii/
 https://leetcode.com/problems/combinations/
-https://leetcode.com/problems/regular-expression-matching/ -- neew to be done with DP.
+https://leetcode.com/problems/regular-expression-matching/ -- need to be done with DP.
 https://leetcode.com/problems/word-search/
-https://leetcode.com/problems/word-ladder-ii/
-https://leetcode.com/problems/word-search-ii/
+https://leetcode.com/problems/word-ladder-ii/ 
+https://leetcode.com/problems/word-search-ii/ -- -- Trie
 https://leetcode.com/problems/permutations/
 https://leetcode.com/problems/n-queens-ii/, n-queen as well.
 https://leetcode.com/discuss/interview-question/267985/
-
+https://leetcode.com/problems/count-numbers-with-unique-digits/discuss/83054/Backtracking-solution
+https://leetcode.com/problems/jump-game/solution/
+https://leetcode.com/problems/generate-parentheses/
+https://leetcode.com/problems/restore-ip-addresses/
+https://leetcode.com/problems/24-game/
+https://leetcode.com/problems/partition-equal-subset-sum/
 
 Breadth First Search
 https://leetcode.com/problems/network-delay-time/
@@ -111,7 +124,7 @@ Two conditions
 it is already connected by checking there parent. 
 https://leetcode.com/problems/sequence-reconstruction/
 https://leetcode.com/problems/similar-string-groups/
-https://leetcode.com/problems/minimum-height-trees/
+-- https://leetcode.com/problems/minimum-height-trees/
 https://leetcode.com/problems/evaluate-division/
 https://leetcode.com/problems/reconstruct-itinerary/
 https://leetcode.com/problems/keys-and-rooms/ need to do plain DFS only
@@ -127,6 +140,9 @@ https://leetcode.com/problems/course-schedule-ii/
 https://leetcode.com/problems/find-the-town-judge/
 https://leetcode.com/problems/find-the-celebrity/
 
+need to right union-find and topological sort DFS/BFS one time
+and Alien Dictionary.
+
 https://www.coursera.org/learn/algorithms-part2
 All Videos of Tushar Roy -- Graph Algorithms
 
@@ -141,6 +157,8 @@ https://leetcode.com/problems/alien-dictionary/
 Tree
 https://leetcode.com/problems/count-complete-tree-nodes/
 https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/
+Convert Sorted List to Binary Search Tree 
+https://leetcode.com/problems/unique-binary-search-trees-ii/
 https://leetcode.com/problems/count-of-smaller-numbers-after-self/
 https://leetcode.com/problems/delete-nodes-and-return-forest/
 https://leetcode.com/problems/binary-tree-coloring-game/
@@ -153,7 +171,7 @@ https://leetcode.com/problems/range-sum-query-2d-mutable/
 https://leetcode.com/problems/flip-equivalent-binary-trees/
 https://leetcode.com/problems/minimum-height-trees/
 https://leetcode.com/problems/the-skyline-problem/
-https://leetcode.com/problems/recover-binary-search-tree/
+https://leetcode.com/problems/recover-binary-search-tree/  -- 
 https://leetcode.com/problems/binary-tree-maximum-path-sum/
 https://leetcode.com/problems/binary-tree-longest-consecutive-sequence/
 https://leetcode.com/problems/range-sum-query-mutable/
@@ -173,16 +191,22 @@ https://leetcode.com/problems/invert-binary-tree/
 https://leetcode.com/problems/subtree-of-another-tree/
 https://leetcode.com/problems/same-tree/
 https://leetcode.com/problems/binary-tree-inorder-traversal/
+https://leetcode.com/explore/learn/card/n-ary-tree/132/conclusion/924/
+https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/
 
 
 Trie
 https://leetcode.com/problems/design-search-autocomplete-system/
+https://leetcode.com/problems/word-search-ii/
 https://leetcode.com/problems/implement-trie-prefix-tree/
 https://leetcode.com/problems/top-k-frequent-words/
-https://leetcode.com/problems/word-search-ii/
+https://leetcode.com/problems/prefix-and-suffix-search/
 https://leetcode.com/problems/stream-of-characters/
+https://leetcode.com/problems/longest-word-in-dictionary/ - and its similar questions.
 https://leetcode.com/explore/learn/card/n-ary-tree/132/conclusion/924/
-
+https://www.geeksforgeeks.org/count-distinct-substrings-string-using-suffix-trie/
+https://leetcode.com/problems/longest-word-in-dictionary/discuss/112720/JAVA-16ms-(99)-%40-20180108-Trie%2BDFS%3A-clean-easy-explained-and-illustrated
+https://leetcode.com/problems/longest-common-prefix/
 
 
 Divide-and-Conquer
@@ -237,6 +261,59 @@ https://leetcode.com/problems/word-break/
 https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 https://leetcode.com/problems/maximum-product-subarray/
 https://leetcode.com/problems/wildcard-matching/
+https://www.youtube.com/watch?v=vBdo7wtwlXs -- minimum jump game.
+https://leetcode.com/problems/jump-game-ii/discuss/18014/Concise-O(n)-one-loop-JAVA-solution-based-on-Greedy
+
+
+
+DP - Top30
+https://leetcode.com/problems/longest-palindromic-substring/
+https://leetcode.com/problems/unique-binary-search-trees/
+https://leetcode.com/problems/word-break/, word-break-II
+https://leetcode.com/problems/counting-bits/
+https://leetcode.com/problems/maximum-product-subarray/
+https://leetcode.com/problems/perfect-squares/
+https://leetcode.com/problems/minimum-cost-tree-from-leaf-values/ -- lee's solution in discuss is perfect, it is equivalent to find next greater element in an array, awesome 
+https://leetcode.com/problems/minimum-path-sum/
+https://leetcode.com/problems/triangle/ -- https://leetcode.com/problems/triangle/discuss/38730/DP-Solution-for-Triangle- Nice Explanation
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/  ---https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/discuss/347053/DP-with-explaination-easy-to-understand
+buy[i] = Math.max(buy[i - 1], sell[i - 2] - prices[i]);   
+sell[i] = Math.max(sell[i - 1], buy[i - 1] + prices[i]);
+
+https://leetcode.com/problems/unique-paths/
+https://leetcode.com/problems/unique-binary-search-trees-ii/
+https://leetcode.com/problems/palindromic-substrings/
+https://leetcode.com/problems/count-numbers-with-unique-digits/
+https://leetcode.com/problems/decode-ways/
+https://leetcode.com/problems/maximal-square/
+https://leetcode.com/problems/arithmetic-slices/ -- sliding window type using simple array to store all the 
+https://leetcode.com/problems/coin-change/
+https://leetcode.com/problems/ugly-number-ii/
+https://leetcode.com/problems/integer-break/
+https://leetcode.com/problems/longest-increasing-subsequence/
+https://leetcode.com/problems/maximal-rectangle/
+jump- game
+https://leetcode.com/problems/guess-number-higher-or-lower-ii/
+https://leetcode.com/problems/stone-game-ii/
+https://leetcode.com/problems/longest-palindromic-subsequence/
+https://leetcode.com/problems/maximum-length-of-repeated-subarray/
+https://leetcode.com/problems/partition-to-k-equal-sum-subsets/
+https://leetcode.com/problems/stone-game/
+https://leetcode.com/problems/range-sum-query-2d-immutable/
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/
+https://leetcode.com/problems/delete-and-earn/
+https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/
+https://leetcode.com/problems/shopping-offers/
+https://leetcode.com/problems/minimum-cost-for-tickets/
+https://leetcode.com/problems/largest-divisible-subset/
+https://leetcode.com/problems/house-robber-ii/
+https://leetcode.com/problems/maximum-length-of-pair-chain/
+https://leetcode.com/problems/unique-paths-ii/
+https://leetcode.com/problems/predict-the-winner/
+https://leetcode.com/problems/can-i-win/
+https://www.techiedelight.com/wildcard-pattern-matching/
+edit distance
+ 
 
 Linked-List must 1-day
 -Search and do 
@@ -285,6 +362,22 @@ https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characte
 https://leetcode.com/problems/longest-substring-without-repeating-characters/
 https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/
 https://leetcode.com/problems/sliding-window-maximum/
+
+Sorted by frequency 
+https://leetcode.com/problems/longest-substring-without-repeating-characters/
+https://leetcode.com/problems/minimum-window-substring/
+https://leetcode.com/problems/sliding-window-maximum/
+https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/
+https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/
+https://leetcode.com/problems/moving-stones-until-consecutive-ii/
+https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/
+https://leetcode.com/problems/subarrays-with-k-different-integers/
+https://leetcode.com/problems/longest-repeating-character-replacement/
+https://leetcode.com/problems/permutation-in-string/
+https://leetcode.com/problems/max-consecutive-ones-iii/
+https://leetcode.com/problems/sliding-window-median/
+https://leetcode.com/problems/grumpy-bookstore-owner/
+
 
 https://leetcode.com/problems/brace-expansion/
 https://leetcode.com/problems/brace-expansion-ii/
@@ -381,6 +474,53 @@ https://leetcode.com/problems/jump-game/
 https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/
 https://leetcode.com/problems/queue-reconstruction-by-height/
 https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
+
+
+
+
+
+
+https://leetcode.com/problems/the-skyline-problem/ -- need to be done.
+
+
+
+Stack-Problems
+Minimum Cost Tree From Leaf Values
+Sum of Subarray Minimums
+Online Stock Span
+Score of Parentheses
+Next Greater Element II
+Next Greater Element I
+Largest Rectangle in Histogram
+Trapping Rain Water
+
+
+Linked List
+Add Two Numbers			
+Merge Two Sorted Lists			
+Reverse Linked List			
+Delete Node in a Linked List			
+Merge k Sorted Lists			
+Sort List			
+Copy List with Random Pointer			
+Linked List Cycle		
+Swap Nodes in Pairs			
+Palindrome Linked List			
+Odd Even Linked List			
+Insertion Sort List			
+Add Two Numbers II			
+Intersection of Two Linked Lists			
+Reorder List			
+Reverse Nodes in k-Group			
+Reverse Linked List II			
+Linked List Cycle II			
+Remove Nth Node From End of List			
+Remove Linked List Elements			
+Remove Duplicates from Sorted List			
+Partition List			
+Convert Sorted List to Binary Search Tree
+
+
 
 
 

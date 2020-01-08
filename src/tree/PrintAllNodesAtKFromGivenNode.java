@@ -9,8 +9,8 @@ public class PrintAllNodesAtKFromGivenNode {
 	public void print(TreeNode root, int node, TreeNode prev, int k,
 			boolean searchingDown) {
 		if (root != null) {
-			if (k == 0 && root.data != node) {
-				System.out.print(" " + root.data);
+			if (k == 0 && root.val != node) {
+				System.out.print(" " + root.val);
 			}
 			if (searchingDown) {
 				print(root.left, node, prev, --k, searchingDown);
@@ -30,7 +30,7 @@ public class PrintAllNodesAtKFromGivenNode {
 		if (root == null)
 			return null;
 		TreeNode x = null;
-		if (root.data == dest || (x = Path(root.left, dest, k - 1, n)) != null
+		if (root.val == dest || (x = Path(root.left, dest, k - 1, n)) != null
 				|| (x = Path(root.right, dest, k - 1, n)) != null) {
 			if (k == 0) {
 				print(root, dest, x, n - k, true);
@@ -46,7 +46,7 @@ public class PrintAllNodesAtKFromGivenNode {
 	public int Pathlength(TreeNode root, int n1) {
 		if (root != null) {
 			int x = 0;
-			if ((root.data == n1) || (x = Pathlength(root.left, n1)) > 0
+			if ((root.val == n1) || (x = Pathlength(root.left, n1)) > 0
 					|| (x = Pathlength(root.right, n1)) > 0) {
 				return x + 1;
 			}

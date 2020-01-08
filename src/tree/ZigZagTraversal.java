@@ -17,7 +17,7 @@ public class ZigZagTraversal {
 		while(!(currentLevel.isEmpty() && nextLevel.isEmpty())){
 			while(!currentLevel.isEmpty()){
 				TreeNode poppedItem = currentLevel.pop();
-				zigZagOrderedList.add(poppedItem.data);
+				zigZagOrderedList.add(poppedItem.val);
 				if(poppedItem.right!=null)
 					nextLevel.push(poppedItem.right);
 				if(poppedItem.left!=null)
@@ -25,7 +25,7 @@ public class ZigZagTraversal {
 			}
 			while(!nextLevel.isEmpty()){
 				TreeNode poppedItem = nextLevel.pop();
-				zigZagOrderedList.add(poppedItem.data);
+				zigZagOrderedList.add(poppedItem.val);
 				if(poppedItem.left!=null)
 					currentLevel.push(poppedItem.left);
 				if(poppedItem.right!=null)
@@ -35,9 +35,45 @@ public class ZigZagTraversal {
 		return zigZagOrderedList;
 	}
 	
+	 /**
+	 * @param root
+	 * @return
+	 * 
+	 * Using BFS as stated in question https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/submissions/
+	 */
+	public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+	        if(root == null){
+	            return new ArrayList<>();
+	        }
+	        Queue<TreeNode> q = new LinkedList<TreeNode>();
+	        q.add(root);
+	        boolean needToBeReversed = false;
+	        List<List<Integer>> result = new ArrayList<>();
+	        while(!q.isEmpty()){
+	            int size = q.size();
+	            List<Integer> levelResult = new ArrayList<Integer>();
+	            for(int i=0; i<size; i++){
+	                TreeNode node = q.poll();
+	                if(!needToBeReversed){
+	                    levelResult.add(node.val);
+	                }else{
+	                    levelResult.add(0,node.val);
+	                }
+	                if(node.left!=null){
+	                    q.add(node.left);
+	                }if(node.right!=null){
+	                    q.add(node.right);
+	                }
+	            }
+	            result.add(levelResult);
+	            needToBeReversed = !needToBeReversed;
+	        }
+	     return result;  
+	    }
+	
 	private static void printBinaryTree(TreeNode root){
 		if(root!=null){
-			System.out.print(root.data+" ");
+			System.out.print(root.val+" ");
 			printBinaryTree(root.left);
 			printBinaryTree(root.right);
 		}

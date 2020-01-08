@@ -7,7 +7,7 @@ public class PrintExtremeNodes {
 	
 	private void printExtremeNodes(TreeNode root){
 		Queue<TreeNode> queue = new LinkedList<TreeNode>();
-		System.out.println(root.data);
+		System.out.println(root.val);
 		queue.add(root);
 		queue.add(null);
 		int count=0,levelCount = 0;
@@ -26,11 +26,11 @@ public class PrintExtremeNodes {
 			}
 			else{
 				if(!flag && count == 0){
-					System.out.println(node.data);
+					System.out.println(node.val);
 				}
 				
 				if(flag && levelCount == count){
-					System.out.println(node.data);
+					System.out.println(node.val);
 				}
 				count++;
 				

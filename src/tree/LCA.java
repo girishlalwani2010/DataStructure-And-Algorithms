@@ -10,8 +10,8 @@ public class LCA {
 	{
 		if(root==null)
 			return null;
-		//LCA can be in the Left Subtree or Right Subtree.
-		if(root.data == itemA || root.data == itemB)
+		//LCA can be in the Left Subtree or Right Subtree. done for early exit from DFS call
+		if(root.val == itemA || root.val == itemB)
 		{
 			return root;
 		}
@@ -40,11 +40,11 @@ public class LCA {
             return null;
   
         // If both n1 and n2 are smaller than root, then LCA lies in left
-        if (node.data > n1 && node.data > n2)
+        if (node.val > n1 && node.val > n2)
             return findLCAOfBST(node.left, n1, n2);
   
         // If both n1 and n2 are greater than root, then LCA lies in right
-        if (node.data < n1 && node.data < n2) 
+        if (node.val < n1 && node.val < n2) 
             return findLCAOfBST(node.right, n1, n2);
         
         // This Line of Code is doing the actual work, 
@@ -68,7 +68,7 @@ public class LCA {
 		root.right.right = new TreeNode(7);
 
 		LCA lca = new LCA();
-		System.out.println(lca.findLCAOfBT(root, 2, 8).data);
+		System.out.println(lca.findLCAOfBT(root, 2, 8).val);
    }
 	
 	

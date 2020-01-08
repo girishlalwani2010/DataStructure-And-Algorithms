@@ -16,7 +16,7 @@ public class DeleteNodesAndReturnForest {
 		}
 		Set<Integer> set = Arrays.stream(to_delete).boxed().collect(Collectors.toSet());
 		dfs(root, set, forest);
-		if(!set.contains(root.data)) {
+		if(!set.contains(root.val)) {
 			forest.add(root);
 		}
 		return forest;
@@ -31,7 +31,7 @@ public class DeleteNodesAndReturnForest {
     	node.left = dfs(node.left, toBeDeleted, forest);
     	node.right = dfs(node.right, toBeDeleted, forest);
     	
-    	if(toBeDeleted.contains(node.data)) {
+    	if(toBeDeleted.contains(node.val)) {
     		if(node.left!=null)
     			forest.add(node.left);
       		if(node.right!=null)

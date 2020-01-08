@@ -10,7 +10,7 @@ public class LinkedListSort {
 		ListNode prev = head;
 
 		while (current != null) {
-			if (current.data < head.data) {
+			if (current.val < head.val) {
 				next = current.next;
 				current.next = head;
 				head = current;
@@ -31,7 +31,7 @@ public class LinkedListSort {
 	private static void printList(ListNode head) {
 
 		while (head != null) {
-			System.out.print(head.data + "-->");
+			System.out.print(head.val + "-->");
 			head = head.next;
 		}
 

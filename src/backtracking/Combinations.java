@@ -18,6 +18,7 @@ public class Combinations {
 			combinations.add(new ArrayList<>(combination));
 			return;
 		}
+		// loop end can be at n-k+1
 		for (int i = start; i <= n; i++) {
 			combination.add(i);
 			helper(n, k, i + 1, combination);

@@ -24,9 +24,7 @@ public class PrintLevelByLevel {
 			} else {
 				if (node.right != null) {
 					queue.add(node.right);
-
 				}
-
 				if (node.left != null) {
 					queue.add(node.left);
 				}
@@ -39,7 +37,7 @@ public class PrintLevelByLevel {
 			if (node == null) {
 				System.out.println();
 			} else {
-				System.out.print(node.data);
+				System.out.print(node.val);
 			}
 		}
 

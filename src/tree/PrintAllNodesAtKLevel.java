@@ -28,7 +28,7 @@ public class PrintAllNodesAtKLevel {
 			}
 
 			if (node != null)
-				list.add(node.data);
+				list.add(node.val);
 
 			if (node != null && node.left != null) {
 				queue.add(node.left);

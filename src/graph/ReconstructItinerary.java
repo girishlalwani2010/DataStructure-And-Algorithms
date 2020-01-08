@@ -14,7 +14,7 @@ public class ReconstructItinerary {
 	public List<String> findItinerary(List<List<String>> tickets) {
 		Map<String, PriorityQueue<String>> adj= new HashMap<>();
         for(List<String> connections: tickets){
-            adj.putIfAbsent(connections.get(0), new PriorityQueue());
+            adj.putIfAbsent(connections.get(0), new PriorityQueue<>());
             adj.get(connections.get(0)).add(connections.get(1));
         }
         String start = "JFK";

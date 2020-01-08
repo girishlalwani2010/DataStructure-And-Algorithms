@@ -7,6 +7,13 @@ public class LargestBSTInBinaryTree {
         return m.size;
     }
     
+    /**
+     * @param root
+     * @return
+     * 
+     * bottom-up dfs to flow the size at upper levels in tree.
+     * same pattern as in checkBTisBalanced and diameterOfTree
+     */
     private MinMax largest(TreeNode root){
     	if(root == null)
     		return new MinMax();
@@ -16,15 +23,15 @@ public class LargestBSTInBinaryTree {
     	
     	MinMax m = new MinMax();
     	
-    	if(leftMinMax.isBST == false || rightMinMax.isBST == false || leftMinMax.max > root.data || rightMinMax.min <= root.data){
+    	if(leftMinMax.isBST == false || rightMinMax.isBST == false || leftMinMax.max > root.val || rightMinMax.min <= root.val){
     		m.size = Math.max(leftMinMax.size, rightMinMax.size);
     		m.isBST = false;
     		return m;
     	}
     	
     	m.size = leftMinMax.size + rightMinMax.size + 1;
-    	m.max = root.right != null ? rightMinMax.max : root.data;
-    	m.min = root.left != null ? leftMinMax.min : root.data;
+    	m.max = root.right != null ? rightMinMax.max : root.val;
+    	m.min = root.left != null ? leftMinMax.min : root.val;
     	m.isBST = true;
     	
     	return m;

@@ -32,7 +32,7 @@ public class DeleteKthNode {
 		
 		DeleteKthNode deleteKthNode = new DeleteKthNode();
 		ListNode modifiedList = deleteKthNode.deleteKthNode(head, 1);
-		System.out.println(modifiedList.data);
+		System.out.println(modifiedList.val);
 		
 	}
 

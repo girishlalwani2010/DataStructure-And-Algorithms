@@ -14,14 +14,14 @@ public class SumTree {
 			return 0;
 		}
 		
-		int temp = root.data;
-		root.data = makeSum(root.left) + makeSum(root.right);
-		return temp + root.data;
+		int temp = root.val;
+		root.val = makeSum(root.left) + makeSum(root.right);
+		return temp + root.val;
 	}
 	
 	private static void printBinaryTree(TreeNode root){
 		if(root!=null){
-			System.out.print(root.data+" ");
+			System.out.print(root.val+" ");
 			printBinaryTree(root.left);
 			printBinaryTree(root.right);
 		}

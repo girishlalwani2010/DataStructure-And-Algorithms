@@ -24,13 +24,28 @@ public class InOrderImpl {
             else
             {
             	TreeNode t = stack.pop();
-            	returnList.add(t.data);
+            	returnList.add(t.val);
             	p=t.right;
             }
  
         }
         return returnList;
     }
+	
+	public int height(TreeNode root) 
+    { 
+        if (root == null) 
+           return 0; 
+       
+            /* compute  height of each subtree */
+            int lheight = height(root.left); 
+            int rheight = height(root.right); 
+              
+            /* use the larger one */
+            if (lheight > rheight) 
+                return(lheight+1); 
+            else return(rheight+1);  
+    } 
 	
 	public static void main(String args[])
 	{
@@ -53,6 +68,7 @@ public class InOrderImpl {
 		InOrderImpl inOrderImpl = new InOrderImpl();
 		
 		System.out.println(inOrderImpl.inorderTraversal(t1));
+		System.out.println(inOrderImpl.height(t1));
 	}
 	
 }

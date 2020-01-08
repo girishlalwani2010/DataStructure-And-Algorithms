@@ -3,6 +3,10 @@ package array;
 import java.util.Arrays;
 import java.util.HashSet;
 
+/**
+ * @author girish_lalwani
+ *https://leetcode.com/problems/minimum-domino-rotations-for-equal-row/solution/ it is also good
+ */
 public class MinimumDominoRotationsForEqualRow {
 	
 	public static int minDominoRotations(int[] A, int[] B) {

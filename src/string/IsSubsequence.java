@@ -35,6 +35,7 @@ public class IsSubsequence {
                 map.put(target[i],new ArrayList<Integer>());
             }
             map.get(target[i]).add(i);
+            
         }
         int sourcePos = -1;
         int prevPos = -1;
@@ -69,6 +70,8 @@ public class IsSubsequence {
 	
 	public static void main(String[] args) {
 		String source = "leeeeetcode";
+		//l -0
+		//e-1,2,3
 		String target = "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyleeeeeeeeeeeeeeeeeeyyyyyyyyyyyyyyyyyyy";
 		System.out.println(isSubsequence(source,target));
 	}

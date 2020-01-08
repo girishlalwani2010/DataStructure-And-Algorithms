@@ -11,16 +11,16 @@ public class CheckBTIsSumTree {
 		}
 		
 		if(node.left == null && node.right == null){
-			return node.data;
+			return node.val;
 		}
 		
 		sum = sum + checkForSumTree(node.left, sum) + checkForSumTree(node.right, sum);
 		
-		if(sum != node.data){
+		if(sum != node.val){
 			return -1;
 		}
 		
-		return node.data+sum;
+		return node.val+sum;
 		
 	}
 	

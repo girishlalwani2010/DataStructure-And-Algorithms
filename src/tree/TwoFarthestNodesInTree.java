@@ -48,7 +48,7 @@ public class TwoFarthestNodesInTree {
 		
 		TwoFarthestNodesInTree twoFarthestNodesInTree = new TwoFarthestNodesInTree();
 		TreeNode[] arr = twoFarthestNodesInTree.farthestInBinaryTree(root, 0);
-		System.out.println(arr[0].data+"  "+arr[1].data);
+		System.out.println(arr[0].val+"  "+arr[1].val);
 	}
 	
 }

@@ -65,7 +65,7 @@ class DetectCycleInUndirectedGraph {
 			visited[i] = false;
 
 		// Call the recursive helper function to detect cycle in
-		// different DFS trees
+		// different DFS trees	
 		for (int u = 0; u < V; u++)
 			if (!visited[u]) // Don't recur for u if already visited
 				if (isCyclicUtil(u, visited, -1))

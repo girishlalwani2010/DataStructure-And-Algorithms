@@ -34,7 +34,8 @@ public class BuildBinaryTree {
 			
 		if(start == end)
 			return node;
-		//can be improved by passing start and end.
+		
+		//can be improved by passing start and end. and using hashmap this step can be done in O(1)
 		int index = findIndexInInorder(inorder,value);
 		node.left = buildBinaryTree(inorder,preorder,start,index-1);
 		node.right = buildBinaryTree(inorder,preorder,index+1,end);
@@ -46,27 +47,27 @@ public class BuildBinaryTree {
 	private static void printBinaryTree(TreeNode root){
 		if(root!=null){
 			printBinaryTree(root.left);
-			System.out.print(root.data+" ");
+			System.out.print(root.val+" ");
 			
 			printBinaryTree(root.right);
 		}
 	}
 	//can be done more efficiently using min, max in O(n)
 	//TODO: Also look construct Binary Tree using Level Order and inorder Traversal.
-	private static TreeNode buildBSTUsingPreorderOnly(int pre[], Index preIndex,
-            int low, int high, int size){
-		 
+	private static TreeNode buildBSTUsingPreorderOnly(int pre[],
+            int low, int high){
+		
         // Base case
-        if (preIndex.index >= size || low > high) {
+        if (low > high || preIndex>=pre.length) {
             return null;
         }
  
         // The first node in preorder traversal is root. So take the node at
         // preIndex from pre[] and make it root, and increment preIndex
-        TreeNode root = new TreeNode(pre[preIndex.index]);
-        preIndex.index = preIndex.index + 1;
+        TreeNode root = new TreeNode(pre[preIndex]);
+        preIndex = preIndex + 1;
  
-        // If the current subarry has only one element, no need to recur
+        // If the current sub-array has only one element, no need to recur
         if (low == high) {
             return root;
         }
@@ -74,30 +75,30 @@ public class BuildBinaryTree {
         // Search for the first element greater than root
         int i;
         for (i = low; i <= high; ++i) {
-            if (pre[i] > root.data) {
+            if (pre[i] > root.val) {
                 break;
             }
         }
  
         // Use the index of element found in preorder to divide preorder array in
         // two parts. Left subtree and right subtree
-        root.left = buildBSTUsingPreorderOnly(pre, preIndex, preIndex.index, i - 1, size);
-        root.right = buildBSTUsingPreorderOnly(pre, preIndex, i, high, size);
+        root.left = buildBSTUsingPreorderOnly(pre, preIndex, i - 1);
+        root.right = buildBSTUsingPreorderOnly(pre, i, high);
  
         return root;
 		
 	}
 	
-	static TreeNode constructTree(int pre[], int size) {
-        return buildBSTUsingPreorderOnly(pre, index, 0, size - 1, size);
+	static TreeNode constructBSTTreeNaiveAlgo(int pre[], int size) {
+        return buildBSTUsingPreorderOnly(pre, 0, size - 1);
     }
 	
 	
-	TreeNode constructTreeUtil(int pre[], Index preIndex, int key,
+	TreeNode constructTreeUtil(int pre[],
             int min, int max, int size) {
  
         // Base case
-        if (preIndex.index >= size) {
+        if (preIndex >= size) {
             return null;
         }
  
@@ -105,23 +106,25 @@ public class BuildBinaryTree {
  
         // If current element of pre[] is in range, then
         // only it is part of current subtree
+        
+       int  key = pre[preIndex];
         if (key <= min || key >= max) {
         	return null;
         }
  
         root = new TreeNode(key);
-        preIndex.index = preIndex.index + 1;
+        preIndex = preIndex + 1;
  
-        if (preIndex.index < size) {
+        if (preIndex < size) {
  
                 // Contruct the subtree under root
                 // All nodes which are in range {min .. key} will go in left
                 // subtree, and first such node will be root of left subtree.
-                root.left = constructTreeUtil(pre, preIndex, pre[preIndex.index],
+                root.left = constructTreeUtil(pre,
                         min, key, size);
                 // All nodes which are in range {key..max} will go in right
                 // subtree, and first such node will be root of right subtree.
-                root.right = constructTreeUtil(pre, preIndex, pre[preIndex.index],
+                root.right = constructTreeUtil(pre,
                         key, max, size);
         }
         
@@ -133,8 +136,7 @@ public class BuildBinaryTree {
     // The main function to construct BST from given preorder traversal.
     // This function mainly uses constructTreeUtil() and constructs tree in O(n)
     TreeNode constructBSTEfficiently(int pre[], int size) {
-        int preIndex = 0;
-        return constructTreeUtil(pre, index, pre[0], Integer.MIN_VALUE,
+        return constructTreeUtil(pre, Integer.MIN_VALUE,
                 Integer.MAX_VALUE, size);
     }
  
@@ -170,7 +172,7 @@ public class BuildBinaryTree {
         //tree.printInorder(root);
 		BuildBinaryTree buildBinaryTree = new BuildBinaryTree();
 		TreeNode tree = new TreeNode();
-        int pre[] = new int[]{10,6,2,8,14,12,16};
+        int pre[] = new int[]{10, 5, 1, 7, 40, 50};
         int size = pre.length;
         TreeNode root = buildBinaryTree.constructBSTEfficiently(pre, size);
         System.out.println("Inorder traversal of the constructed tree is ");

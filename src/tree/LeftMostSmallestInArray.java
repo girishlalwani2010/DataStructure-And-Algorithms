@@ -14,8 +14,8 @@ public class LeftMostSmallestInArray {
 	    for(int i=1;i<arr.length;i++) {
 	        node = root;
 	        while(node != null) {
-	            if(arr[i] > node.data) {
-	                ans[i] = node.data;
+	            if(arr[i] > node.val) {
+	                ans[i] = node.val;
 	                break;
 	            }
 	            else if(node.left == null) {

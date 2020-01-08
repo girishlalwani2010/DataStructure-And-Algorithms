@@ -13,15 +13,16 @@ public class ShortestWayToFormString {
 	 * @param target
 	 * @return
 	 * 
-	 * for example for source xyzxzyxz
+	 * for example for source xyz
+	 * target xzyxz
 	 * 
 	 * HashMap will be like below will be implemented than we can apply binary search for character in target, and store the sourcePos till we have found match 
 	 * and binary search will be to find next possible sourcePos by doing binary search on particular chartacter Array-List, and if it is less that or equal to previous found than 
 	 * we can say that new subsequence matching started.  
 	 * 
-	 * x --> 0,3,6
-	 * y --> 1,5
-	 * z --> 2,4,7
+	 * x --> 0
+	 * y --> 1
+	 * z --> 2
 	 * 
 	 */
 	public static int shortestWay(String source, String target) {
@@ -46,7 +47,6 @@ public class ShortestWayToFormString {
             }
         }
         return res;
-        
     }
     private static int findNext(List<Integer> l, int pos){
     	int low = 0;

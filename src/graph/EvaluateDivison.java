@@ -67,7 +67,6 @@ public class EvaluateDivison {
 		return graph;
     }
     
-	public static void main(String[] args) {
-	}
+	// better intuitive top-down way 10/11 test cases passed 
 
 }

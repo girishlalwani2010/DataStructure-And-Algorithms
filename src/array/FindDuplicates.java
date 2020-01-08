@@ -3,10 +3,10 @@ class FindDuplicates {
     public int findDuplicate(int[] nums) {
         // Find the intersection point of the two runners.
         int tortoise = nums[0];
-        int hare = nums[1];
+        int hare = nums[0];
         do {
             tortoise = nums[tortoise];
-            hare = nums[hare];
+            hare = nums[nums[hare]];
         } while (tortoise != hare);
 
         // Find the "entrance" to the cycle.

@@ -36,7 +36,7 @@ public class NetworkDelayTime {
 				return o1[2] - o2[2];
 			}
 		});
-		
+		//S,D,C
 		int[] minimumCostNode = {0,K,0};
 		pq.add(minimumCostNode);
 		settled.set(minimumCostNode[1], false);

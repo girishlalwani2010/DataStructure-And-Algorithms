@@ -15,6 +15,18 @@ public class CampusBikesII {
 		return min;
 	}
 
+	/**
+	 * @param visit
+	 * @param workers
+	 * @param i
+	 * @param bikes
+	 * @param distance
+	 * 
+	 * wi,bi steps in backtracking
+	 * 0,0  0,0  0,1  0,1  0,2   0,2      
+	   1,1  1,2  1,0  1,2  1,0   1,1
+	   2,2  2,1  2,2  2,0  2,1   2,0
+	 */
 	public static void dfs(boolean[] visit, int[][] workers, int i, int[][] bikes, int distance) {
 		if (i >= workers.length) {
 			min = Math.min(distance, min);
@@ -40,8 +52,8 @@ public class CampusBikesII {
 	}
 
 	public static void main(String[] args) {
-		int[][] workers = {{0,0}, {1,0}, {2,0}, {3,0}, {4,0}};
-		int[][] bikes = {{0,999}, {1,999}, {2,999}, {3,999}, {4,999}};
+		int[][] workers = {{0,0},{1,1},{2,0}};
+		int[][] bikes = {{1,0},{2,2},{2,1}};
 		System.out.println(assignBikes(workers, bikes));
 	}
 

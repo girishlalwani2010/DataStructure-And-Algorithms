@@ -25,7 +25,7 @@ public class DiagonalTraversal {
         }
 
         List<Integer> diagonalNodes = diagonalMap.getOrDefault(diagonal, new ArrayList<>());
-        diagonalNodes.add(node.data);
+        diagonalNodes.add(node.val);
         diagonalMap.put(diagonal, diagonalNodes);
 
         printHelper(node.left, diagonalMap, diagonal + 1);

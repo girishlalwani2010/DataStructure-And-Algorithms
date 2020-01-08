@@ -37,7 +37,7 @@ class PrintCorner
             // if isFirst is true, then temp is leftmost node
             if (isFirst) 
             {
-                System.out.print(temp.data + "  ");
+                System.out.print(temp.val + "  ");
  
                 if (temp.left != null)
                     q.add(temp.left);
@@ -69,7 +69,7 @@ class PrintCorner
             else
             {
                 // Store current key as last
-                last = temp.data;
+                last = temp.val;
  
                 // Here we are making isOne = false to signify
                 // that level has more than one node

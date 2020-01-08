@@ -2,6 +2,23 @@ package tree;
 
 import java.util.Stack;
 
+//https://www.geeksforgeeks.org/print-common-nodes-in-two-binary-search-trees/
+	
+
+/**
+ * @author girish_lalwani
+ *
+ *
+ *Method 2 (Linear Time) We can find common elements in O(n) time.
+1) Do inorder traversal of first tree and store the traversal in an auxiliary array ar1[]. See sortedInorder() here.
+2) Do inorder traversal of second tree and store the traversal in an auxiliary array ar2[]
+3) Find intersection of ar1[] and ar2[]. See this for details.
+
+Time complexity of this method is O(m+n) where m and n are number of nodes in first and second tree respectively. This solution requires O(m+n) extra space.
+
+Method 3 (Linear Time and limited Extra Space) We can find common elements in O(n) time and O(h1 + h2) extra space where h1 and h2 are heights of first and second BSTs respectively.
+The idea is to use iterative inorder traversal. We use two auxiliary stacks for two BSTs. Since we need to find common elements, whenever we get same element, we print it.
+ */
 public class PrintCommonInBST {
 
 	void printCommon(TreeNode root1, TreeNode root2)
@@ -33,9 +50,9 @@ public class PrintCommonInBST {
 	            root2 = s2.peek();
 	 
 	            // If current keys in two trees are same
-	            if (root1.data == root2.data)
+	            if (root1.val == root2.val)
 	            {
-	                System.out.print(root1.data+" ");
+	                System.out.print(root1.val+" ");
 	                s1.pop();
 	                s2.pop();
 	 
@@ -44,7 +61,7 @@ public class PrintCommonInBST {
 	                root2 = root2.right;
 	            }
 	 
-	            else if (root1.data < root2.data)
+	            else if (root1.val < root2.val)
 	            {
 	                // If Node of first tree is smaller, than that of
 	                // second tree, then its obvious that the inorder
@@ -58,7 +75,7 @@ public class PrintCommonInBST {
 	                // new Nodes of tree 1
 	                root2 = null;
 	            }
-	            else if (root1.data > root2.data)
+	            else if (root1.val > root2.val)
 	            {
 	                s2.pop();
 	                root2 = root2.right;

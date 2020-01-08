@@ -12,7 +12,7 @@ public class PrintNodeWithKLeaves {
 		}
 		int noOfLeaves = getNoOfLeaves(node.left,k) + getNoOfLeaves(node.right,k);
 		if(noOfLeaves == k){
-			System.out.println(node.data);
+			System.out.println(node.val);
 		}
 		return noOfLeaves;
 	}

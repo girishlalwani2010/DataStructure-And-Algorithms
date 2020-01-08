@@ -7,7 +7,7 @@ static int totalSum=0;
 		if(root == null)
 			return 0;
 		
-		sum = sum*10 + root.data;
+		sum = sum*10 + root.val;
 		
 		if(root.left == null && root.right==null){
 			totalSum = totalSum + sum;

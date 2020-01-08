@@ -26,12 +26,12 @@ public class MaxLevelSum {
 			else{
 			
 			if(currentNode.left!=null){
-				sum = sum + currentNode.left.data;
+				sum = sum + currentNode.left.val;
 				queue.offer(currentNode.left);
 			}
 			
 			if(currentNode.right != null){
-				sum = sum + currentNode.right.data;
+				sum = sum + currentNode.right.val;
 				queue.offer(currentNode.right);
 			}
 			}

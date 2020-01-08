@@ -36,7 +36,7 @@ public class PathWithMaxGold {
         }
         
         visited[row][col] = true;
-        
+ 
         goldAmmount = goldAmmount + grid[row][col];
         
         if(goldAmmount>maxGold){
@@ -47,6 +47,8 @@ public class PathWithMaxGold {
             dfs(row+pos[0],col+pos[1], grid, goldAmmount,visited);
         }
         visited[row][col] = false;
+        // variable those are local to recursion will take there previous state automatically from stack-frame when recursion will backtrack
+        // hence gold-amount is not deducted.
     }
     
     

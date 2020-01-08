@@ -27,7 +27,7 @@ public class PermutationsOfListOfIntegers {
 	    
 	    private void permute(List<Integer> nums, int i){
 	        
-	        if(i==nums.size()){
+	        if(i==nums.size()-1){
 	            result.add(new ArrayList<>(nums));
 	        }
 	        

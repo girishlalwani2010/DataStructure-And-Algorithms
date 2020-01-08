@@ -6,7 +6,7 @@ public class SumIsEqualToPath {
 		if(node == null){
 			return (sum == 0);
 		}
-		sum = sum - node.data;
+		sum = sum - node.val;
 		return isAnyPathPossible(node.left,sum)||isAnyPathPossible(node.right,sum);
 	}
 	

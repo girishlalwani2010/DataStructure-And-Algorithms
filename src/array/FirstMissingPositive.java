@@ -1,5 +1,33 @@
 package array;
 
+/**
+ * @author girish_lalwani
+ *
+ *
+ * Notes : 
+ * 
+ * First can be solve using hashmap by putting all positives in it and search will start from 1.
+ * Solution with no space in O(n) time:
+ * Approach-1. We can segregate negative and positive elements and then will negate all the elements 
+ * 	   starting from index=j+1, as we incremented j's count when we find the negative element and
+ * 	   and will swap this position-j with negative element, 
+ * 	   and after that will negate the elements at index of elements at index j
+ * 	   then will search for number starting from j to find the non negative number.   
+ *
+ *Approach-2. 
+ * We can use n+1 as marker if number is less than 0, as missing positive number will be between 1 to n+1.
+ * Then will negate the A[A[i]], if it is positive to avoid duplicates.
+ * and then will find first positive.
+ * https://leetcode.com/problems/first-missing-positive/discuss/17214/Java-simple-solution-with-documentation	
+ *
+ *Approach-3, generic can also be used in couple hands and missing number problem.
+ * Try to make the position of number starting from i=0, Right - https://leetcode.com/problems/first-missing-positive/discuss/17071/My-short-c%2B%2B-solution-O(1)-space-and-O(n)-time
+ * So at one time one number will be at its right place at min, with internal which keep on running 
+ * till A[A[i]-1]!=A[i].
+ *
+ *For ex: {5,4,1,2,3} --swap(5,3)--> {3,4,1,2,5} --swap(3,1)--> {1,4,3,2,5} --swap(4,2)--> {1,2,3,4,5}
+ *
+ */
 public class FirstMissingPositive {
 	static int segregate(int arr[], int size) 
     { 

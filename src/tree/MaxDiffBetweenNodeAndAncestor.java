@@ -15,7 +15,7 @@ public class MaxDiffBetweenNodeAndAncestor {
 		int leftValue = maxDiffUtil(node.left);
 		int rightValue = maxDiffUtil(node.right);
 		
-		val = node.data;
+		val = node.val;
 		
 		if(node.left!=null){
 			val = Math.min(leftValue, val);
@@ -24,7 +24,7 @@ public class MaxDiffBetweenNodeAndAncestor {
 			val = Math.min(rightValue, val);
 		}
 		
-		result = Math.max(node.data-val, result);
+		result = Math.max(node.val-val, result);
 		
 		return val;
 		
