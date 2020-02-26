@@ -2,6 +2,26 @@ package array;
 class MountainSubArray 
 { 
     // Utility method to construct left and right array 
+    /**
+     * @param arr
+     * @param N
+     * @param left
+     * @param right
+     * 
+     * idx	 0 1 2 3 4 5 6 7
+	   arr	[2 3 2 4 4 6 3 2]
+       left [0 1 1 3 3 5 5 5]
+       rig	[1 1 5 5 5 5 6 7]	
+
+
+	left[] - store last increasing
+	right[] - store first decreasing
+	
+	So if firstDecreasingIndex in array>=lastIncreasingIndex in array then array will sure shot first increasing than decreasing.
+		if means firstDecreasing far away from lastIncreasing
+     * 
+     * 
+     */
     static void preprocess(int arr[], int N, int left[], int right[]) 
     { 
         // initialize first left index as that index only 

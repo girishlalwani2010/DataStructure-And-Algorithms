@@ -96,5 +96,6 @@ public class LongestPalindromSubstring {
 	public static void main(String[] args) {
 		System.out.println(longestPalindrome("banana"));
 	}
+	
 
 }

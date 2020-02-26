@@ -1,4 +1,8 @@
 package array;
+/**
+ * @author girish_lalwani
+ *As duplicate can be repeated n-times, hence not XOR
+ */
 class FindDuplicates {
     public int findDuplicate(int[] nums) {
         // Find the intersection point of the two runners.
@@ -19,6 +23,9 @@ class FindDuplicates {
 
         return ptr1;
     }
+    
+    // 2
+    // 2
     
     
 }

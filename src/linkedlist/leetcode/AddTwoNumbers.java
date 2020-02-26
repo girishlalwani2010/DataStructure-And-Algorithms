@@ -7,30 +7,81 @@ public class AddTwoNumbers {
 	/**
 	 * https://leetcode.com/problems/add-two-numbers/
 	 */
+//	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+//		ListNode dummyHead = new ListNode(0);
+//		ListNode resultNode = dummyHead;
+//		int sum = 0;
+//		int carry = 0;
+//		while (l1 != null || l2 != null) {
+//			int x = (l1 != null) ? l1.val : 0;
+//			int y = (l2 != null) ? l2.val : 0;
+//			sum = x + y + carry;
+//			carry = sum / 10;
+//			sum = sum % 10;
+//			dummyHead.next = new ListNode(sum);
+//			dummyHead = dummyHead.next;
+//			if (l1 != null)
+//				l1 = l1.next;
+//			if (l2 != null)
+//				l2 = l2.next;
+//		}
+//
+//		if (carry > 0) {
+//			dummyHead.next = new ListNode(carry);
+//		}
+//
+//		return resultNode.next;
+//	}
+	
+	
+	/**
+	 * @param l1
+	 * @param l2
+	 * @return
+	 *  Most important start resultNode from memory reference, as this is the actual thing in memory.
+		as if dummy node is not taken, then l3 will iterate and create node till end but we nothing as return head and dummy here will
+		act as return head. 
+	 */
 	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-		ListNode dummyHead = new ListNode(0);
-		ListNode resultNode = dummyHead;
-		int sum = 0;
-		int carry = 0;
-		while (l1 != null || l2 != null) {
-			int x = (l1 != null) ? l1.val : 0;
-			int y = (l2 != null) ? l2.val : 0;
-			sum = x + y + carry;
-			carry = sum / 10;
-			sum = sum % 10;
-			dummyHead.next = new ListNode(sum);
-			dummyHead = dummyHead.next;
-			if (l1 != null)
-				l1 = l1.next;
-			if (l2 != null)
-				l2 = l2.next;
-		}
-
-		if (carry > 0) {
-			dummyHead.next = new ListNode(carry);
-		}
-
-		return resultNode.next;
+        ListNode dummy = new ListNode(0);
+        // why L3 = dummy not dummy.next as dummy.next is null and null is not the memory location.
+        // so when appending the new node to l3, will not append it to dummy. Hence L3=dummy.  
+        ListNode l3 = dummy;
+        int a=0,b=0,sum=0,carry=0;
+        while(l1!=null || l2!=null){
+            a = (l1==null)?0:l1.val;
+            b = (l2==null)?0:l2.val;
+            sum = (a+b+carry);
+            sum = sum%10;
+            l3.next = new ListNode(sum);
+            carry = sum/10;
+            l3 = l3.next;
+            
+            if(l1!=null){
+                l1 = l1.next;    
+            }
+            
+            if(l2!=null){
+                l2 = l2.next;    
+            }
+            
+        }
+        
+        if(carry>=1){
+            l3.next = new ListNode(carry);
+        }
+        return dummy.next;
+    }
+	
+	public static void main(String[] args) {
+		AddTwoNumbers addTwoNumbers = new AddTwoNumbers();
+		ListNode l1 = new ListNode(2);
+		l1.next = new ListNode(4);
+		l1.next.next = new ListNode(3);
+		ListNode l2 = new ListNode(5);
+		l2.next = new ListNode(6);
+		l2.next.next = new ListNode(4);
+		addTwoNumbers.addTwoNumbers(l1, l2);
 	}
 	
 	/**

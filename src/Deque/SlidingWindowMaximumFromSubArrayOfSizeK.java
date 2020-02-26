@@ -3,6 +3,10 @@ package Deque;
 import java.util.Deque;
 import java.util.LinkedList;
 
+/**
+ * @author girish_lalwani
+ * https://leetcode.com/problems/sliding-window-maximum/
+ */
 class SlidingWindowMaximumFromSubArrayOfSizeK {
     public int[] maxSlidingWindow(int[] nums, int k) {
         

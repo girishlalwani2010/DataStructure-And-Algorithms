@@ -32,7 +32,6 @@ public class SlidingWindow_Count_of_substrings_which_contains_a_given_character_
 	
 	public static void main(String[] args) {
 		System.out.println(getPossibleStrings("ABADA", 2, 'A'));
-		
 	}
 
 }

@@ -19,7 +19,7 @@ public class CloneALinkedListWithRandom {
 		ListNode cloneItr = clone;
 		
 		Map<ListNode, ListNode> nodeToCloneNode = new HashMap<>();
-		nodeToCloneNode.put(headItr, cloneItr);
+		nodeToCloneNode.put(head, clone);
 		
 		while(headItr.next!=null) {
 			cloneItr.next = new ListNode(headItr.next.val);
@@ -37,5 +37,10 @@ public class CloneALinkedListWithRandom {
 		
 		return clone;
 	}
+	
+	//Can also be done in O(1) space and linear time
+	// 7->2->3->null will convert it to // 7->7->2->2->3->3->null, so clone will be next to it.
+	// head.next.random = head.random.next;
+	
 	
 }

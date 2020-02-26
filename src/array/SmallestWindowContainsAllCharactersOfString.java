@@ -67,7 +67,7 @@ public class SmallestWindowContainsAllCharactersOfString {
 	}
 	
 	public static void main(String[] args) {
-		 String str = "aabcbcdbca";
+		 String str = "aabcbcdbbca";
 		 System.out.println(findSubString(str));
 	}
 	

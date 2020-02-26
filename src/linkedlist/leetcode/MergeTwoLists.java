@@ -4,7 +4,14 @@ import linkedlist.ListNode;
 
 public class MergeTwoLists {
 	
-	 public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+	 /**
+	 * @param l1
+	 * @param l2
+	 * @return
+	 * 
+	 * Whenever you need a new node to return create dummy-node, as it's next will be result's head.
+	 */
+	public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
 	        ListNode dummyNode = new ListNode(0);
 	        ListNode curr = dummyNode;
 	        while(l1!=null && l2!=null){
@@ -19,16 +26,12 @@ public class MergeTwoLists {
 	            
 	        }
 	        
-	       while(l1!=null){
+	       if(l1!=null){
 	                curr.next = l1;
-	                l1 = l1.next;
-	                curr = curr.next;
 	        } 
 	        
-	         while(l2!=null){
+	         if(l2!=null){
 	                curr.next = l2;
-	                l2 = l2.next;
-	                curr = curr.next;
 	        }
 	        
 	        return dummyNode.next;

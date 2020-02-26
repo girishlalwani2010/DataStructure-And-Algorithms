@@ -32,35 +32,34 @@ public class TwodimensionalArray {
 		  [1,2,3]
 		]	
 	 */
-	public static void rotateBy90degree(int[][] matrix) {
-		int cols = matrix.length;
-		int rows = matrix[0].length;
-		
-		for(int row=0; row<rows/2; row++) {
-			for(int col=0; col<cols; col++) {
-				int temp = matrix[row][col];
-				matrix[row][col] = matrix[rows-(row+1)][col];
-				matrix[rows-(row+1)][col] = temp;
-			}
-		}
-		
-		for(int row=0; row<rows; row++) {
-			for(int col=0; col<cols; col++) {
-				if(row<=col) {
-				int temp = matrix[row][col];
-				matrix[row][col] = matrix[col][row];
-				matrix[col][row] = temp;
-				}
-			}
-		}
-		
-		System.out.println(Arrays.deepToString(matrix).replace("], ", "]\n").replace("[[", "[").replace("]]", "]"));
-	
-	}
+	static void rotate90Clockwise(int a[][]) 
+	{ 
+	  
+	    // Traverse each cycle 
+	    for (int i = 0; i < a.length / 2; i++) 
+	    { 
+	        for (int j = i; j < a.length - i - 1; j++) 
+	        { 
+	  
+	            // Swap elements of each cycle 
+	            // in clockwise direction 
+	            int temp = a[i][j]; 
+	            a[i][j] = a[a.length - 1 - j][i]; 
+	            a[a.length - 1 - j][i] = a[a.length - 1 - i][a.length - 1 - j]; 
+	            a[a.length - 1 - i][a.length - 1 - j] = a[j][a.length - 1 - i]; 
+	            a[j][a.length - 1 - i] = temp; 
+	            System.out.println("Swapped Elements :");
+	            System.out.println("[i,j]:"+i+","+j);
+	            System.out.println("[i,j]:"+(a.length - 1 - j)+","+i);
+	            System.out.println("[i,j]:"+(a.length - 1 - i)+","+(a.length - 1 - j));
+	            System.out.println("[i,j]:"+j+","+(a.length - 1 - i));
+	        } 
+	    } 
+	} 
 	
 	public static void main(String[] args) {
-		int[][] matrix = {{1,2,3},{4,5,6},{7,8,9}};
-		rotateBy90degree(matrix);
+		int[][] matrix = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
+		rotate90Clockwise(matrix);
 	}
 
 }

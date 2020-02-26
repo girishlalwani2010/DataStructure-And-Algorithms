@@ -1,20 +1,23 @@
-package array;
+package array.left.right.array.pattern;
 
 public class EquilibriumPointInArray {
 
 	private static int leftSum;
 	private static int rightSum;
 	
-	private static void findEquilibriumIndex(int[] arr) {
-		for(int i=1; i<arr.length-1;i++){
-			leftSum = leftSum + arr[i-1];
-			rightSum = rightSum - arr[i];
-			
+	private static int findEquilibriumIndex(int[] arr) {
+		for(int i=0; i<arr.length;i++){
 			if(leftSum == rightSum){
 				System.out.println("Equi Index is : "+i);
-				break;
+				return i;
 			}
+			if(i == arr.length-1) {
+				return -1;
+			}
+			leftSum = leftSum + arr[i];
+			rightSum = rightSum - arr[i+1];
 		}
+		return -1;
 	}
 	
 	public static void main(String[] args) {

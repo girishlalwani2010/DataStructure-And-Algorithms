@@ -74,7 +74,7 @@ public class CountInversions {
 	 
 	
 	public static void main(String[] args) {
-		  int arr[] = {1, 20, 6, 4, 5};
+		  int arr[] = {2,4,1,3,5};
 		  CountInversions countInversion = new CountInversions();
 		  System.out.println(" Number of inversions are "+countInversion.mergeSort(arr, 5));
 	}

@@ -45,7 +45,7 @@ public class StockSpanII {
     // Driver method 
     public static void main(String[] args) 
     { 
-        int price[] = {100,80,60,70,65,75,85}; 
+        int price[] = {100,80,50,70,65,75,85}; 
         int n = price.length; 
         int S[] = new int[n]; 
   

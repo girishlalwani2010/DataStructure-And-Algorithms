@@ -5,58 +5,40 @@ import java.util.Comparator;
 
 public class ReorderDataInLogFiles {
 	
-	public static String[] reorderLogFiles(String[] logs) {
-		int checkingIndex=logs.length-2, numberIndex=logs.length-1;
-		String[] logsSecondPart = new String[logs.length];
-				
-		for(int i=0; i<logs.length; i++) {
-			logsSecondPart[i] = logs[i].split(" ")[1];
-		}		
-				
-		while(checkingIndex>=0) {
-			char checkIndChar = logsSecondPart[checkingIndex].charAt(0);
-			char numberIndChar = logsSecondPart[numberIndex].charAt(0);
-			if(numberIndChar>=97 && numberIndChar<=122) {
-				if(checkIndChar>=48 && checkIndChar<=57) {
-					String temp = logs[checkingIndex];
-					logs[checkingIndex] = logs[numberIndex];
-					logs[numberIndex] = temp;
-					String temp1 = logsSecondPart[checkingIndex];
-					logsSecondPart[checkingIndex] = logsSecondPart[numberIndex];
-					logsSecondPart[numberIndex] = temp1;
-					numberIndex--;
-				}
-				checkingIndex--;
-			}else {
-				numberIndex--;
-				checkingIndex--;
-			}
-			
-		}
-		
-		logsSecondPart = new String[numberIndex+1];
-		for(int i=0; i<=numberIndex; i++) {
-			logsSecondPart[i] = logs[i];
-		}
-		
-		Arrays.sort(logsSecondPart,new Comparator<String>() {
-			@Override
-			public int compare(String str1, String str2) {
-				// TODO Auto-generated method stub
-				return str1.substring(str1.indexOf(" ")+1).compareTo(str2.substring(str2.indexOf(" ")+1));
-			}
-		});
-		
-		for(int i=0; i<logsSecondPart.length; i++) {
-			logs[i] = logsSecondPart[i];
-		}
-		
-		return logs;
-		
-	}
+	    public String[] reorderLogFiles(String[] logs) {
+	        
+	        Arrays.sort(logs, new Comparator<String>(){
+	            
+	            public int compare(String s1, String s2){
+	                boolean isDigit1 = Character.isDigit(s1.split(" ")[1].charAt(0));
+	                boolean isDigit2 = Character.isDigit(s2.split(" ")[1].charAt(0));                                      
+	                if(!isDigit1 && !isDigit2){
+	                  int cmp = s1.substring(s1.indexOf(" ")).compareTo(s2.substring(s2.indexOf(" ")));
+	                    if(cmp == 0){
+	                        return s1.compareTo(s2);
+	                    }
+	                    else{
+	                        return cmp;
+	                    }
+	                }else{
+	                    return isDigit1?(isDigit2?0:1):-1;
+	                }
+	            }
+	            
+	        });
+	        
+	        return logs;
+	    }
 	
-	public String[] reorderLogFiles2(String[] logs) {
+	/**
+	 * @param logs
+	 * @return
+	 * Best one
+	 */
+	public static String[] reorderLogFiles2(String[] logs) {
         Arrays.sort(logs, (log1, log2) -> {
+        	// function will be efficient for long strings,as it apply the pattern 1 time, as pewr java-docs it used to apply the 
+        	// pattern n-1 times. for string[] of length n.
             String[] split1 = log1.split(" ", 2);
             String[] split2 = log2.split(" ", 2);
             boolean isDigit1 = Character.isDigit(split1[1].charAt(0));
@@ -75,7 +57,7 @@ public class ReorderDataInLogFiles {
 	public static void main(String[] args) {
 		//String[] logs = {"dig1 8 1 5 1","let1 art can","dig2 3 6","let2 own kit dig","let3 art zero"};
 		String[] logs = {"t kvr", "r 3 1", "i 403", "7 so", "t 54"};
-		System.out.println(reorderLogFiles(logs));
+		System.out.println(reorderLogFiles2(logs));
 	}
 
 }
