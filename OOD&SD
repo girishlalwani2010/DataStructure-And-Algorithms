@@ -1,0 +1,40 @@
+System Design
+https://leetcode.com/discuss/interview-question/system-design/124858/First-non-repeating-word-in-a-file-File-size-can-be-100GB.
+https://leetcode.com/discuss/interview-question/system-design/124658/Design-URL-Shortening-service-like-TinyURL
+https://leetcode.com/discuss/interview-question/system-design/124558/Uber-or-Rate-Limiter
+Twitter - https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/twitter/README.md
+Design a system that scales to millions of users on AWS - https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/scaling_aws/README.md
+Starbucks - https://www.enterpriseintegrationpatterns.com/ramblings/18_starbucks.html
+Google Docs - Multi-Master System Design.
+
+Reddit Design - https://www.youtube.com/watch?v=pjNTgULVVf4&list=PLVi1LmRuKQ0NINQfjKLVen7J2lZFL35wP
+
+Design an Analytical system / Reports / Dashboards.
+https://www.youtube.com/watch?v=bUHFg8CZFws
+Batch(Near to Real-Time) vs Real-Time Processing 
+
+
+Object Oriented
+https://leetcode.com/discuss/interview-question/object-oriented-design/124542/Design-Uber-Backend
+https://leetcode.com/discuss/interview-question/object-oriented-design/124744/Design-an-online-hotel-booking-system
+https://leetcode.com/discuss/interview-question/object-oriented-design/124640/Design-a-Logistics-System
+https://leetcode.com/discuss/interview-question/object-oriented-design/124564/Amazon-or-OOD-or-Design-a-chess-game
+Design a Tic-Tac-Toe.
+Design Elevator.
+
+Scalability Web Development.
+https://www.youtube.com/watch?v=-W9F__D3oY4
+
+Zookeeper
+https://zookeeper.apache.org/doc/r3.5.5/zookeeperOver.html
+https://www.quora.com/What-is-Apache-Zookeeper-used-for
+
+
+RDBMS
+	Isolation Levels
+	https://media.datadirect.com/download/docs/odbc/allodbc/index.html#page/odbc/isolation-levels.html
+
+
+
+
+
