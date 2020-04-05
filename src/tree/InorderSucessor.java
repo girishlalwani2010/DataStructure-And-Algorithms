@@ -57,7 +57,6 @@ public class InorderSucessor {
 	 *         for BST ans that will take O(h) time-complexity.
 	 */
 	TreeNode prevNode = null;
-	boolean isFound = false;
 	TreeNode successor = null;
 
 	public TreeNode inorderSuccessorINBinaryTree(TreeNode root, int item) {
@@ -66,13 +65,12 @@ public class InorderSucessor {
 		}
 		inorderSuccessorINBinaryTree(root.right, item);
 		if (root.val == item) {
-			isFound = true;
 			successor = prevNode;
 		} else {
 			prevNode = root;
 		}
 		inorderSuccessorINBinaryTree(root.left, item);
-		if (isFound) {
+		if (successor!=null) {
 			return successor;
 		} else {
 			return null;
