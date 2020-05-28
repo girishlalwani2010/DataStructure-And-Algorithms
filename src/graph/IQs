@@ -1,0 +1,56 @@
+Amazon
+https://leetcode.com/problems/path-with-maximum-minimum-value/
+https://leetcode.com/problems/course-schedule-ii/
+https://leetcode.com/problems/reconstruct-itinerary/
+https://leetcode.com/problems/alien-dictionary/
+https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/
+https://leetcode.com/problems/clone-graph/
+https://leetcode.com/problems/find-the-town-judge/
+https://leetcode.com/problems/graph-valid-tree/
+https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/
+https://leetcode.com/problems/course-schedule/
+https://leetcode.com/problems/is-graph-bipartite/
+https://leetcode.com/problems/minimum-height-trees/
+
+
+Google
+https://leetcode.com/problems/string-transforms-into-another-string/
+https://leetcode.com/problems/network-delay-time/
+https://leetcode.com/problems/find-eventual-safe-states/ -- need to do with topological sort as well
+https://leetcode.com/problems/optimize-water-distribution-in-a-village/ -- need to read prim's and kruskal for this.
+https://leetcode.com/problems/redundant-connection/
+https://leetcode.com/problems/redundant-connection-ii/ -- need to be implement done with design using quick-union, 
+Two conditions 
+1). either node has already a parent. So return node with its existing parent, as one node cannot have two parents 
+2). or they are already connect via different path that is there is cycle if 1->2->3->4->1, when 4->1 union operation comes 
+it is already connected by checking there parent. 
+https://leetcode.com/problems/sequence-reconstruction/
+https://leetcode.com/problems/similar-string-groups/
+-- https://leetcode.com/problems/minimum-height-trees/
+-- https://leetcode.com/problems/evaluate-division/
+https://leetcode.com/problems/reconstruct-itinerary/
+https://leetcode.com/problems/keys-and-rooms/ need to do plain DFS only
+https://leetcode.com/problems/course-schedule-ii/
+https://leetcode.com/problems/is-graph-bipartite/
+https://leetcode.com/problems/alien-dictionary/
+https://leetcode.com/problems/couples-holding-hands/
+https://leetcode.com/problems/graph-valid-tree/
+https://leetcode.com/problems/optimize-water-distribution-in-a-village/
+https://leetcode.com/problems/clone-graph/
+https://leetcode.com/problems/course-schedule/
+https://leetcode.com/problems/course-schedule-ii/
+https://leetcode.com/problems/find-the-town-judge/
+https://leetcode.com/problems/find-the-celebrity/
+
+need to right union-find and topological sort DFS/BFS one time
+and Alien Dictionary.
+
+https://www.coursera.org/learn/algorithms-part2
+All Videos of Tushar Roy -- Graph Algorithms
+
+
+Topological sort
+https://leetcode.com/problems/longest-increasing-path-in-a-matrix/
+https://leetcode.com/problems/sequence-reconstruction/
+https://leetcode.com/problems/course-schedule-ii/
+https://leetcode.com/problems/alien-dictionary/
