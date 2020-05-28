@@ -43,9 +43,7 @@ public class IsBTBST {
 		return true;
 	}
 
-	
-	
-	//Impl using in-order.
+	// Impl using in-order.
 	TreeNode prev = null;
 
 	public boolean isBTBSTUsingInorder(TreeNode root) {
@@ -53,17 +51,19 @@ public class IsBTBST {
 			return true;
 		}
 		boolean left = isBTBSTUsingInorder(root.left);
-		if (prev != null && root.val <= prev.val) {
+		if (prev != null && prev.val >= root.val) {
 			return false;
 		}
 		prev = root;
-		boolean right = isBTBSTUsingInorder(root.right);
-
-		if (left && right) {
-			return true;
-		} else {
+		if (!left) {
 			return false;
 		}
+		boolean right = isBTBSTUsingInorder(root.right);
+
+		if (!right) {
+			return false;
+		}
+		return true;
 	}
 
 	public static void main(String[] args) {

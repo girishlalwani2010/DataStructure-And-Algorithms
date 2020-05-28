@@ -11,7 +11,7 @@ class WeightedUnionFind{
 		size = new int[vertices];
 		for(int i=0; i<vertices; i++) {
 			parent[i] = i;
-			size[i] = i;
+			size[i] = 1;
 		}
 	}
 	

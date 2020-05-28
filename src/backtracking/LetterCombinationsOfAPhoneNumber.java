@@ -8,58 +8,45 @@ import java.util.Map;
 
 public class LetterCombinationsOfAPhoneNumber {
 
-	private List<String> result;
-
-	public void helper(String digits, Map<Character, List<Character>> map, int digitPos, StringBuilder sb) {
-
-		if (digits.length() == digitPos) {
-			result.add(sb.toString());
-			return;
-		}
-
-		for (Character chr : map.get(digits.charAt(digitPos))) {
-			sb.append(chr);
-			helper(digits, map, digitPos + 1, sb);
-			sb.setLength(sb.length() - 1);
-		}
-
-	}
-
-	public List<String> letterCombinations(String digits) {
-		if(digits.length() == 0) {
-			return new ArrayList<String>();
-		}
-	        Map<Character,List<Character>> map = new HashMap<>();
-	        List<Character> charsToDigit = stringToCharList("abc");
-	        map.put('2',charsToDigit);
-	        charsToDigit = stringToCharList("def");
-	        map.put('3', charsToDigit);
-	        charsToDigit = stringToCharList("ghi");
-	        map.put('4', charsToDigit);
-	        charsToDigit = stringToCharList("jkl");
-	        map.put('5', charsToDigit);
-	        charsToDigit = stringToCharList("mno");
-	        map.put('6', charsToDigit);
-	        charsToDigit = stringToCharList("pqrs");
-	        map.put('7', charsToDigit);
-	        charsToDigit = stringToCharList("tuv");
-	        map.put('8', charsToDigit);
-	        charsToDigit = stringToCharList("wxyz");
-	        map.put('9', charsToDigit);
-	        
-	        result = new ArrayList<String>();
-	        helper(digits, map, 0, new StringBuilder());
+	 Map<Integer,List<Character>> map = new HashMap<>();
+	    List<String> result = new ArrayList<>();
+	    
+	    public List<String> letterCombinations(String digits) {
+	        if(digits.length()==0){
+	            return new ArrayList<>();
+	        }
+	        map.put(2,stringToCharList("abc"));
+	        map.put(3,stringToCharList("def"));
+	        map.put(4,stringToCharList("ghi"));
+	        map.put(5,stringToCharList("jkl"));
+	        map.put(6,stringToCharList("mno"));
+	        map.put(7,stringToCharList("pqrs"));
+	        map.put(8,stringToCharList("tuv"));
+	        map.put(9,stringToCharList("wxyz"));
+	        letterCombinations(digits, 0, new StringBuilder(), map);
 	        return result;
 	    }
-
-	private List<Character> stringToCharList(String str) {
-		List<Character> charsToDigit = new ArrayList<Character>();
-		char arrayChar[] = str.toCharArray();
-		for (char aChar : arrayChar) {
-			charsToDigit.add(aChar); //  autoboxing 
+	    
+	    private List<Character> stringToCharList(String str) {
+			List<Character> charsToDigit = new ArrayList<Character>();
+			char arrayChar[] = str.toCharArray();
+			for (char aChar : arrayChar) {
+				charsToDigit.add(aChar); //  autoboxing 
+			}
+			return charsToDigit;
 		}
-		return charsToDigit;
-	}
+	    
+	    public void letterCombinations(String digits, int start, StringBuilder sb, Map<Integer,List<Character>> map) {
+	        if(start == digits.length()){
+	            result.add(sb.toString());
+	            return;
+	        }
+	         for(Character ch : map.get(Character.getNumericValue(digits.charAt(start)))){
+	            sb.append(ch);
+	            letterCombinations(digits, start+1, sb, map);
+	            sb.setLength(sb.length() -1);
+	        }
+	    }
 	
 	
 	public static void main(String[] args) {

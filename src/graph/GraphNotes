@@ -1,0 +1,53 @@
+1). Topological sort - Find SP, work only in case DAG only, that is with Directed Graph no-cycle 
+	Longest Path can also be find by Topological Sort, by making all the weights negative, for example as we know that -6 is smaller than -4.
+	so in positive will find 4 and with negative will find path with -6.
+	And Can also be done by not negating the weights like we intialize cost to reach to every node to -Infinity,
+	then will take the max cost from relax function , so will maximize the cost.
+	
+	Application of Longest Path: Job Scheduling longest time that it will take.
+	Complexity is O(E+V)
+	
+2). Djikstra - Works for DAG, non-DAG, undirected-graph, but not in case of negative-weights.
+	1----(cost->5)----2
+	|                |
+	(cost->10)       (cost-> -20)
+	|                |
+	3----(cost->6)----4 
+	
+	why it not works for negative weights, so will take 1-2 then will take 2 from PQ then mark it as visited and if two will come as
+	child of anyother will not consider it, so cost will remain inplace of minimum cost to reach 2 from 1 is -4.
+	Application Examples: Seam carving, resolution adjustments.
+	
+	Complexity is O(ElogV)
+	Due to Heap.
+	
+3). Bellman-Ford - Works for Negative-weight as well, but not for negative-cycle, negative-cycle can be found by running by running 
+algo on every node V times in place of |V-1|  times.
+Negative Cycle Application : Currency Conversion Hack/Arbitrage
+
+ 	Complexity is O(EV)
+
+4). Belman Ford with Queue.
+
+
+
+5). DFS Time Complexity : 
+
+https://www.quora.com/Why-is-the-complexity-of-DFS-O-V+E
+If your graph is implemented as an adjacency matrix (a V x V array), then, for each node, you have to traverse an entire row of length V in the matrix to discover all its outgoing edges. Please note that each row in an adjacency matrix corresponds to a node in the graph, and the said row stores information about edges stemming from the node. So, the complexity of DFS is O(V * V) = O(V^2).
+If your graph is implemented using adjacency lists, wherein each node maintains a list of all its adjacent edges, then, for each node, you could discover all its neighbors by traversing its adjacency list just once in linear time. For a directed graph, the sum of the sizes of the adjacency lists of all the nodes is E (total number of edges). So, the complexity of DFS is O(V) + O(E) = O(V + E).
+For an undirected graph, each edge will appear twice. Once in the adjacency list of either end of the edge. So, the overall complexity will be O(V) + O (2E) ~ O(V + E).
+
+Same will be for BFS.
+
+
+
+6). Djikstra Time Complexity.
+	a). Will ElogV if priority queue is used, as extract from priority-queue will take overall o(log(v)). 
+		Explanation : So overall time-complexity will be log(V) .log(v). log(v)...... V times, till Q is empty . So it will O(Vlog(V)) plus inner loop that will have overall
+		complexity of O(E multiply by offer time took by PQ) i.e. O(Elog(V)). So the overall complexity of djikstra with PW will be O(Vlog(V))+O(Elog(V)).
+		If E>>V then it will proportional to O(Elog(V)). 
+	b). EV if normal List or queue is used.
+		Explanation : Internal for-loop will take max O(E) complexity overall including all recursive and taking minimum from any linear data structure will take O(number of elements at that time in that structure). 
+		So overall take minimum will have complexity of O(V). So the overall complexity of djikstra will be O(EV)  
+

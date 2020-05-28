@@ -1,4 +1,4 @@
-package tree;
+package array;
 
 public class MaxContiguousProductSubArray {
 

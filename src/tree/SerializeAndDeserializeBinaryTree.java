@@ -15,10 +15,6 @@ import java.util.Queue;
  *         
  *         https://leetcode.com/problems/serialize-and-deserialize-bst/discuss/164504/Java-concise-Solution.
  */
-/**
- * @author girish_lalwani
- *
- */
 public class SerializeAndDeserializeBinaryTree {
 
 	// Encodes a tree to a single string.
@@ -36,6 +32,7 @@ public class SerializeAndDeserializeBinaryTree {
 	public TreeNode deserialize(String data) {
 		// looks like that we have to use global variable to iterate over data array one
 		// by one to deserialize.
+		// can also be done using Integer class.
 		int[] start = { 0 };
 		return deserialize(data.split(","), start);
 	}

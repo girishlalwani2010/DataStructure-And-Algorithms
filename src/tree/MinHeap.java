@@ -64,7 +64,6 @@ public class MinHeap {
 			swap(k,smallest);
 			sinkDown(smallest);
 		}
-				
 	}
 	public void swap(int a, int b){
 		//System.out.println("swappinh" + mH[a] + " and " + mH[b]);

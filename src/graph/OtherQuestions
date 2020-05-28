@@ -3,5 +3,10 @@ https://algs4.cs.princeton.edu/41graph/BipartiteX.java.html
 https://algs4.cs.princeton.edu/40graphs/
 
 
-Find all vertices connected to a given source.
-Find a path between two vertices.
+Find the Diameter and center of Acyclic graph : at code-forces -- https://codeforces.com/blog/entry/17974
+Euler Cycle in a graph in undirected and directed both  --- Hierholzer’s Algorithm.  https://www.geeksforgeeks.org/hierholzers-algorithm-directed-graph/
+Multi-Source Shortest Path. -- Can be done using multi-source BFS.
+
+
+
+

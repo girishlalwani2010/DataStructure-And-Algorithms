@@ -40,12 +40,17 @@ public class ReconstructItinerary {
 	 * 
 	 * Basic idea is to store last one first , that is ending airline and then backtrack
 	 * 
+	 * Priority Queue is must over there as we have to not be continued in the cycle but just process cycle once,
+	 * So to process cycle once there is one data-structure that can do this is Queue as it works on poll, and priority-Q
+	 * here as we need itinerary that has the smallest lexical order.
+	 * 
+	 *  Hierholzer's Algorithm
 	 * 
 	 */
 	public void dfs(Map<String, PriorityQueue<String>> adj, String airline) {
 		PriorityQueue<String> connections = adj.get(airline);
 		while(connections!=null && !connections.isEmpty()) {
-			dfs(adj, (String)connections.poll());
+			dfs(adj, connections.poll());
 		}
 		iternary.add(0,airline);
 	}

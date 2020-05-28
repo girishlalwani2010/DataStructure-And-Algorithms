@@ -1,7 +1,7 @@
 package stack;
 import java.util.Arrays;
 
-public class nextGreaterElement {
+public class NextGreaterElementII {
 	private static final int MAX = 100;
 	int top = 0;
 	int[] arr = new int[MAX];
@@ -50,7 +50,7 @@ public class nextGreaterElement {
 		//int[] arr = {13,7,6,12};
 		int n = arr.length;
 		System.out.println("Given array : "+Arrays.toString(arr));
-		nextGreaterElement stack = new nextGreaterElement();
+		NextGreaterElementII stack = new NextGreaterElementII();
 		
 		int[] nge = new int[n];
 		for(int i=0; i<n; i++) nge[i]=-1;
