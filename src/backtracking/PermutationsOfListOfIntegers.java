@@ -25,17 +25,17 @@ public class PermutationsOfListOfIntegers {
 	        return list;
 	    }
 	    
-	    private void permute(List<Integer> nums, int i){
+	    private void permute(List<Integer> nums, int start){
 	        
-	        if(i==nums.size()-1){
+	        if(start==nums.size()){
 	            result.add(new ArrayList<>(nums));
 	        }
 	        
-	        for(int j=i; j<nums.size(); j++){
-	            Collections.swap(nums, i, j);
-	            permute(nums,i+1);
+	        for(int i=start; i<nums.size(); i++){
+	            Collections.swap(nums, start, i);
+	            permute(nums,start+1);
 	            //BackTracking
-	            Collections.swap(nums, i, j);
+	            Collections.swap(nums, start, i);
 	        }
 	    }
 	    

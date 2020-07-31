@@ -68,6 +68,11 @@ public class DecodeWays {
 	
 	public static void main(String[] args) {
 		DecodeWays decodeWays = new DecodeWays();
+		Map<Character, Integer> map = new HashMap<>();
+    	map.put('^', 3);
+    	map.put('*', 2);
         System.out.println(decodeWays.numDecodingsTopDown("16205"));
+        
+        
     }
 }

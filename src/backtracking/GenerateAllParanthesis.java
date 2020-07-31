@@ -37,7 +37,7 @@ public class GenerateAllParanthesis {
 	    if(open == n && close == n) {
 	        res.add(sb.toString());
 	        return;
-	    }
+	    }		
 	    
 	    if(open < n) {
 	        sb.append("(");

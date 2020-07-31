@@ -1,0 +1,161 @@
+Two Sum
+Median of Two Sorted Arrays
+Container With Most Water
+Trapping Rain Water
+Maximum Subarray
+Sum
+Best Time to Buy and Sell Stock
+Product of Array Except Self
+Array Partition I
+Maximal Rectangle
+Majority Element
+Plus One
+Merge Intervals
+Merge Sorted Array
+Sum Closest
+Move Zeroes
+Best Time to Buy and Sell Stock II
+Next Permutation
+Rotate Image
+Game of Life
+Longest Consecutive Sequence
+First Missing Positive
+Maximum Product Subarray
+TwoSum
+JewelsandStones
+LongestSubstringWithoutRepeatingCharacters
+SingleNumber
+EncodeandDecodeTinyURL
+MaximalRectangle
+CopyListwithRandomPointer
+HappyNumber
+MaxPointsonaLine
+GroupAnagrams
+DailyTemperatures
+IslandPerimeter
+MinimumWindowSubstring
+SudokuSolver
+MedianofTwoSortedArrays
+Powxn
+SearchinRotatedSortedArray
+-- CountofSmallerNumbersAfterSelf
+TwoSumIIInputarrayissorted
+FindtheDuplicateNumber
+IntersectionofTwoArrays
+DivideTwoIntegers
+FindMinimuminRotatedSortedArray
+SearchaDMatrixII
+CountofRangeSum
+https://leetcode.com/problems/find-peak-element/
+KthSmallestElementinaSortedMatrix
+BestTimetoBuyandSellStockII
+QueueReconstructionbyHeight
+RemoveDuplicateLetters
+TaskScheduler
+PartitionLabels
+JumpGameII
+MeetingRoomsII
+GasStation
+Candy
+ContainerWithMostWater
+TrappingRainWater
+LongestSubstringWithoutRepeatingCharacters
+ReverseString
+Sum
+MergeSortedArray
+SumClosest
+MoveZeroes
+SortList
+MergeIntervals
+CountofSmallerNumbersAfterSelf
+InsertionSortList
+LargestNumber
+IntersectionofTwoArrays
+TrappingRainWater
+ValidParentheses
+MaximalRectangle
+MinStack
+MinimumCostTreeFromLeafValues
+DailyTemperatures
+BinarySearchTreeIterator
+RemoveDuplicateLetters
+DecodeString
+FlattenNestedListIterator
+MergekSortedLists
+TheSkylineProblem
+TopKFrequentElements
+MeetingRoomsII
+KthLargestElementinanArray
+FindMedianfromDataStream
+SlidingWindowMaximum
+KthSmallestElementinaSortedMatrix
+AddTwoNumbers
+MergeTwoSortedLists
+ReverseLinkedList
+MergekSortedLists
+SortList
+DeleteNodeinaLinkedList
+CopyListwithRandomPointer
+LinkedListCycle
+https://practice.geeksforgeeks.org/problems/modify-linked-list-1/1
+LongestSubstringWithoutRepeatingCharacters
+MinimumWindowSubstring
+SlidingWindowMaximum
+NumberofSubmatricesThatSumtoTarget
+MovingStonesUntilConsecutiveII
+LongestSubstringwithAtMostKDistinctCharacters
+
+
+--String--
+
+RomantoInteger
+ZigZagConversion
+LongestSubstringWithoutRepeatingCharacters
+ReverseString
+LongestPalindromicSubstring
+LongestCommonPrefix
+GenerateParentheses
+IntegertoRoman
+ValidParentheses
+CountandSay
+LetterCombinationsofaPhoneNumber
+RegularExpressionMatching
+AddBinary
+GroupAnagrams
+ReverseWordsinaString
+DefanginganIPAddress
+ReorderDatainLogFiles
+EditDistance
+IntegertoEnglishWords
+MinimumWindowSubstring
+
+--Design--
+
+LRUCache
+MinStack
+BinarySearchTreeIterator
+SerializeandDeserializeBinaryTree
+FlattenNestedListIterator
+FindMedianfromDataStream
+
+
+-- Math -- 
+AddTwoNumbers
+RomantoInteger
+PoorPigs
+EncodeandDecodeTinyURL
+PalindromeNumber
+ReverseInteger
+IntegertoRoman
+AddDigits
+HappyNumber
+AddBinary
+MaxPointsonaLine
+NumberofDigitOne
+ExcelSheetColumnNumber
+BulbSwitcher
+IntegertoEnglishWords
+
+
+
+

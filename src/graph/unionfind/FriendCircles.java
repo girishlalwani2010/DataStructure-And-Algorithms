@@ -31,12 +31,11 @@ public class FriendCircles {
             if (rootP == rootQ) return;
             if (rank[rootQ] > rank[rootP]) {
                 parent[rootP] = rootQ;
+                rank[rootP]+=rank[rootQ];
             }
             else {
                 parent[rootQ] = rootP;
-                if (rank[rootP] == rank[rootQ]) {
-                    rank[rootP]++;
-                }
+                rank[rootQ]+=rank[rootP];
             }
             count--;
         }

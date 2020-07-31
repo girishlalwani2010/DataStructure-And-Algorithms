@@ -37,6 +37,7 @@ public class SearchInRotatedSortedArrayWithDuplicates {
 			}else if(nums[mid]<nums[high]){
 				high=mid;
 			}else {
+				// pruning for case [1,1,1,1,1,2,1,1,1], target=2
 				if(nums[high-1] > nums[high]) {
 					low=high;
 					break;

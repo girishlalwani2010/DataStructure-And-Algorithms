@@ -22,8 +22,8 @@ public class LongestIncreasingSubsequence {
 				if (nums[i] > nums[j]) {
 					dp[i] = Integer.max(dp[i], dp[j]+1);
 				}
-				maxLength = Integer.max(dp[i], maxLength);
 			}
+			maxLength = Integer.max(dp[i], maxLength);
 		}
 		return maxLength;
 	}
