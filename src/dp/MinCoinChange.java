@@ -18,9 +18,39 @@ public class MinCoinChange {
         return dp[amount];
     }
 	
+	
+	 public static int coinChangeTopDown(int[] coins, int amount) {
+	        return coinChange(coins, amount, 0, new Integer[amount+1]);
+	    }
+	    
+    private static int coinChange(int[] coins, int remaining, int start, Integer[] memo){
+    	System.out.println("remaining:"+remaining+" ,start:"+start);
+        if(remaining == 0){
+            return 0; 
+        }
+        
+        if(remaining<0){
+            return -1;
+        }
+        
+        if(memo[remaining]!=null){
+            return memo[remaining];
+        }
+        
+        int min = Integer.MAX_VALUE;
+        for(int i=0; i<coins.length; i++){
+            int res = coinChange(coins, remaining-coins[i], i, memo);
+            if(res>=0){
+                min = Math.min(min, res+1);
+            }
+        }
+        min = ((min == Integer.MAX_VALUE) ? -1:min);
+        return memo[remaining] = min;
+    }
+	
 	public static void main(String[] args) {
-		int []coins = {1,2,5};
+		int []coins = {5,1,3,2};
 		int amount = 11;
-		System.out.println(coinChange(coins, amount));
+		System.out.println(coinChangeTopDown(coins, amount));
 	}
 }

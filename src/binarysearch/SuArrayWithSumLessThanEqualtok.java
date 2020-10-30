@@ -29,6 +29,7 @@ public class SuArrayWithSumLessThanEqualtok {
 	         Integer num = set.ceiling(currSum - k);
 	         if(num != null) result = Math.max( result, currSum - num );
 	         set.add(currSum);
+	         System.out.println("[currsum, currsum-k, num, set, result]: "+currSum+" ,"+(currSum - k)+" ,"+num+", "+set.toString()+", "+result);
 	     }
 	     
 	     System.out.println(result);

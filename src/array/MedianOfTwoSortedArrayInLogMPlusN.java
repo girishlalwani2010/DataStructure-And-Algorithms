@@ -56,8 +56,8 @@ public class MedianOfTwoSortedArrayInLogMPlusN {
 		while (low <= high) {
 			int partitionX = (low + high) / 2;
 			int partitionY = (x + y + 1) / 2 - partitionX;
-			int maxLeftX = (partitionX == 0) ? Integer.MIN_VALUE : nums1[partitionX - 1];
-			int minRightX = (partitionX == x) ? Integer.MAX_VALUE : nums1[partitionX];
+			int maxLeftX = (partitionX == 0) ? Integer.MIN_VALUE : nums1[partitionX - 1]; // x1
+			int minRightX = (partitionX == x) ? Integer.MAX_VALUE : nums1[partitionX]; 
 			int maxLeftY = (partitionY == 0) ? Integer.MIN_VALUE : nums2[partitionY - 1];
 			int minRightY = (partitionY == y) ? Integer.MAX_VALUE : nums2[partitionY];
 			

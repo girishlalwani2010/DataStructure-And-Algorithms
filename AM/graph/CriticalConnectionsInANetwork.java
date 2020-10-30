@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class CriticalConnectionsInANetwork {
+public class 
+ {
 	List<List<Integer>> result = new ArrayList<>();
 	int time = 0;
 	public List<List<Integer>> criticalConnections(int n, List<List<Integer>> connections) {

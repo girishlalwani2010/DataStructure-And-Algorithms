@@ -26,13 +26,14 @@ public class PostOrderOfBinaryTree {
 
 			if (temp.right != null) {
 				stack.push(temp.right);
-				temp.right = null;
 			}
 
 			if (temp.left != null) {
 				stack.push(temp.left);
-				temp.left = null;
 			}
+			
+			temp.left = null;
+			temp.right = null;
 
 		}
 

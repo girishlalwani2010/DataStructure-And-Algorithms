@@ -32,7 +32,7 @@ import java.util.Map;
  *
  * 	
  */
-public class String_Transforms_Into_Another_String {
+public class StringTransformsIntoAnotherString {
 
 	
 	public boolean canConvert(String str1, String str2) {

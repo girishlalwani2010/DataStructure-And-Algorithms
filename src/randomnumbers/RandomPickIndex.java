@@ -42,7 +42,7 @@ public class RandomPickIndex {
 	            if (nums[i] == target) {
 	                // randomly select an int from 0 to the nums of target. If x equals 0, set the res as the current index. The probability is always 1/nums for the latest appeared number. For example, 1 for 1st num, 1/2 for 2nd num, 1/3 for 3nd num (1/2 * 2/3 for each of the first 2 nums).
 	                int x = rand.nextInt(++total); 
-	                res = x == 0 ? i : res;
+	                res = x == 0 ? i : res; // 2, 2,3
 	            }
 	        }
 	        return res;

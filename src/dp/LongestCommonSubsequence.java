@@ -30,7 +30,7 @@ public class LongestCommonSubsequence {
 	            // or map.put(i+"|"+j, 1+longestCommonSubsequence(text1, text2, i-1, j-1));
 	            dp[m][n] = 1+longestCommonSubsequenceUsingTopDownMemoization(text1, text2, m-1, n-1, dp);
 	        }else{
-	            dp[m][n] = Math.max(longestCommonSubsequenceUsingTopDownMemoization(text1, text2, m-1, n, dp),                                                longestCommonSubsequenceUsingTopDownMemoization(text1, text2, m, n-1, dp));
+	            dp[m][n] = Math.max(longestCommonSubsequenceUsingTopDownMemoization(text1, text2, m-1, n, dp),longestCommonSubsequenceUsingTopDownMemoization(text1, text2, m, n-1, dp));
 	        }
 	        
 	        return dp[m][n];

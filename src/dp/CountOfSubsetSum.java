@@ -5,25 +5,29 @@
 	
 	public class CountOfSubsetSum {
 		
-		private int countSubsetsRecursive(int[] num, int rem, int start, Map<String, Integer> memo) {
-			if(rem == 0) {
+		private int countSubsets(int[] nums, int remaining, int start, Integer[][] memo) {
+			
+			if(remaining==0) {
 				return 1;
 			}
-			String key = start+"#"+rem;
-			if(memo.containsKey(key)) {
-				System.out.println(key);
-				return memo.get(key);
+			if(remaining<0) {
+				return 0;
+			}
+			if(start == nums.length) {
+				return 0;
+			}
+			if(memo[start][remaining]!=null) {
+				return memo[start][remaining];
 			}
 			int count=0;
-			for(int i=start; i<num.length; i++) {
-				count+=countSubsetsRecursive(num, rem-num[i], i+1, memo);
+			for(int i=start; i<nums.length; i++) {
+				count+=countSubsets(nums, remaining-nums[i], i+1, memo);
 			}
-			memo.put(key, count);
-			return count;
+			return memo[start][remaining] = count;
 		}
 	
-		public int countSubsets(int[] num, int sum) {
-			return countSubsetsRecursive(num, sum, 0, new HashMap<>());
+		public int countSubsets(int[] nums, int remaining) {
+			return countSubsets(nums, remaining, 0, new Integer[nums.length][remaining+1]);
 		}
 	
 		public static void main(String[] args) {

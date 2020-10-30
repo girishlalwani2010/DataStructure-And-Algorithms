@@ -33,7 +33,7 @@ public class Djikistra {
 		pq.add(new NodeWithCost(src, 0));
 		dist[src] = 0;
 		while (!pq.isEmpty()) {
-			int u = pq.remove().node;
+			int u = pq.poll().node;
 			visited.add(u);
 			traverseNeighbours(u);
 		}

@@ -44,8 +44,8 @@ class Graph {
         // Step 2: Relax all edges |V| - 1 times. A simple 
         // shortest path from src to any other vertex can 
         // have at-most |V| - 1 edges 
-        // running loop for v-1 as if it runs v times then there is a cycle and positive cycle will not impact.
-        // but negative could, that's why we use this algo to detect negative cycles
+        // running loop for v-1 as if it runs v times then there is a cycle and positive cycle will not impact.but negative could, 
+        //that's why we use this algo to detect negative cycles as well.
         for (int i = 1; i < V; ++i) { 
             for (int j = 0; j < E; ++j) { 
                 int u = graph.edge[j].src; 

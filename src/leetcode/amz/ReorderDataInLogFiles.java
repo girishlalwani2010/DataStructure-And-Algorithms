@@ -21,7 +21,8 @@ public class ReorderDataInLogFiles {
 	                        return cmp;
 	                    }
 	                }else{
-	                    return isDigit1?(isDigit2?0:1):-1;
+	                	// for tim-sort it will be , return isDigit1?(isDigit2?0:1):-1;
+	                    return isDigit1?(isDigit2?-1:1):-1;
 	                }
 	            }
 	            
@@ -53,8 +54,8 @@ public class ReorderDataInLogFiles {
 	
 
 	public static void main(String[] args) {
-		System.setProperty("java.util.Arrays.useLegacyMergeSort", "true");
-		String[] logs = {"dig1 8 1 5 1","let1 art can"};
+//		System.setProperty("java.util.Arrays.useLegacyMergeSort", "true");
+		String[] logs = {"dig1 8 1 5 1","let1 art can","dig2 3 6","let2 own kit dig","let3 art zero"};
 		//String[] logs = {"t kvr", "r 3 1", "i 403", "7 so", "t 54"};
 		System.out.println(Arrays.asList(reorderLogFiles(logs)));
 	}

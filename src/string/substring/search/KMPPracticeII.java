@@ -49,8 +49,8 @@ public class KMPPracticeII {
 	}
 	
 	public static void main(String[] args) {
-		String str = "abcxabcdabcdabcy";
-		String subString = "abcdabcy";
+		String str = "aacabcaby";
+		String subString = "aacaby";
 		KMPPracticeII kmp = new KMPPracticeII();
 		long startIdx = kmp.kmp(str, subString);
 		System.out.print(startIdx);

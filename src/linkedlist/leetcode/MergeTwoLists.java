@@ -27,11 +27,11 @@ public class MergeTwoLists {
 	        }
 	        
 	       if(l1!=null){
-	                curr.next = l1;
+	           curr.next = l1;
 	        } 
 	        
 	         if(l2!=null){
-	                curr.next = l2;
+	            curr.next = l2;
 	        }
 	        
 	        return dummyNode.next;

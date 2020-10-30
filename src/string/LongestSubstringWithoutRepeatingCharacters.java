@@ -49,6 +49,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
 	       while(end<s.length()){
 	           if(charToPos.containsKey(s.charAt(end))){
 	                int pos = charToPos.get(s.charAt(end));
+	                //optimization
 	                start = Math.max(pos+1,start);
 	           }
 	           charToPos.put(s.charAt(end),end);

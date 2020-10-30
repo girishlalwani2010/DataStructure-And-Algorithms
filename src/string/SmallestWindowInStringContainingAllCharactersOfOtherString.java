@@ -36,9 +36,9 @@ public class SmallestWindowInStringContainingAllCharactersOfOtherString {
 	
 	public static void main(String[] args) {
 		
-		String text = "thisisateststring";
+		String text = "thiis";
 					 //0123456789
-		String pattern = "tist";
+		String pattern = "this";
 		
 		System.out.println(findSmallestWindow(text,pattern));
 		

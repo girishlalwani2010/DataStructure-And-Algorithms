@@ -32,7 +32,7 @@ package graph.unionfind;
  *       <em>p</em> is connected to <em>r</em>.
  *  </ul>
  *  <p>
- *  An equivalence relation partitions the sites into
+ *  An equivalence relation partitions the sites into\
  *  <em>equivalence classes</em> (or <em>components</em>). In this case,
  *  two sites are in the same component if and only if they are connected.
  *  Both sites and components are identified with integers between 0 and

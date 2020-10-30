@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 import java.util.TreeMap;
+import java.util.TreeSet;
 
 /**
  * @author girish_lalwani
@@ -52,13 +53,9 @@ public class VerticalOrder {
             TreeNodeWithHD node = q.poll();
             int hd = node.hd;
             TreeNode tNode = node.node;
-            if(map.containsKey(hd)){
-                map.get(hd).add(tNode.val);
-            }else{
-                List<Integer> list = new ArrayList<Integer>();
-                list.add(tNode.val);
-                map.put(hd,list);
-            }
+            
+            map.computeIfAbsent(hd,x-> new ArrayList<>()).add(tNode.val);
+            
             if(tNode.left!=null){
                 TreeNodeWithHD tNodeLeft = new TreeNodeWithHD(tNode.left,hd-1);
                 q.add(tNodeLeft);
@@ -76,5 +73,33 @@ public class VerticalOrder {
         }
         
         return res;
+    }
+    
+    
+    public List<List<Integer>> verticalTraversal(TreeNode root) {
+        TreeMap<Integer, TreeMap<Integer,ArrayList<Integer>>> treeMap = new TreeMap<>();
+        verticalTraversal(treeMap, root, 0, 0);
+        List<List<Integer>> verticalOrder = new ArrayList<>();
+        for(Map.Entry<Integer,TreeMap<Integer, ArrayList<Integer>>> entry : treeMap.entrySet()){
+            TreeMap<Integer, ArrayList<Integer>> innerMap = entry.getValue();
+            List<Integer> hdList = new ArrayList<>();
+            for(List<Integer> list : innerMap.values()) {
+            	hdList.addAll(list);
+            }
+            verticalOrder.add(hdList);
+        }
+        return verticalOrder;
+    }
+    
+    private void verticalTraversal(TreeMap<Integer, TreeMap<Integer,ArrayList<Integer>>> treeMap, TreeNode root, int hd, int level){
+        
+        if(root == null){
+            return;
+        }
+        
+        treeMap.computeIfAbsent(hd,x-> new TreeMap<Integer,ArrayList<Integer>>()).computeIfAbsent(level,x->new ArrayList<>()).add(root.val);
+        
+        verticalTraversal(treeMap, root.left, hd-1, level+1);
+        verticalTraversal(treeMap, root.right, hd+1, level+1);
     }
 }
