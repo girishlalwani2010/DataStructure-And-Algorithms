@@ -10,6 +10,7 @@ class Node{
         this.key = key;
         this.value = value;
     }
+ // default constructor
     public Node(){
        
     }
