@@ -50,7 +50,7 @@ public class AndroidLockingPatternNaive {
 	    }
 	    
 	    public static void main(String[] args) {
-			System.out.println(numberOfPatterns(3, 4));
+			//System.out.println(numberOfPatterns(3, 4));
 		}
 
 }
