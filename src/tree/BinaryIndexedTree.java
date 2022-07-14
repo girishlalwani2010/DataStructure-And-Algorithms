@@ -10,7 +10,7 @@ public class BinaryIndexedTree {
       }  
     }
   
-    // add val to index of BIT  
+    // add val to index and next elements to index of BIT.
     public void update(int idx, int val) {
         for(; idx<tree.length; idx = getNext(idx)){
           tree[idx]+=val;
