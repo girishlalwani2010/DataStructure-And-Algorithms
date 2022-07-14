@@ -17,7 +17,7 @@ public class BinaryIndexedTree {
         }
     }
   
-    //return sum from 0 to idx
+    //return sum from 0 to idx in input array
     public int getSum(int idx) {
       int sum=0;
       for(; idx>0; idx=getParent(idx)){
