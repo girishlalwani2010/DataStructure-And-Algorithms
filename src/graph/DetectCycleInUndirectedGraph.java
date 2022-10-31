@@ -32,8 +32,8 @@ class DetectCycleInUndirectedGraph {
 	// cycle in subgraph reachable from vertex v.
 	 * 
 	 *  In case of example graph 0---1
-	 *  						 |	 |
-			                     3---2	
+	 *  			     |	 |
+				     3---2	
 			                     
 	*	when will be in DFS at 1 we already visited 0, so will not do DFS, for 0 again, and simply check parent of 1, 
 	*	as we have not DFS for 1-0 , So check is (parent of 1) i.e. 0 is equal to i (i.e. 0) it returns false.
